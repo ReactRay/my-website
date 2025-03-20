@@ -15,6 +15,11 @@ export function Hero() {
 
                     <h3>welcome to my website</h3>
 
+                    <div className="link-box">
+                        <a href="/Radwan_Mansur_Resume.pdf" download="Radwan_Mansur_CV.pdf">Download CV</a>
+
+                        <a href="">Projects</a></div>
+
 
                 </div>
 

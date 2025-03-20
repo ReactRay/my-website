@@ -19,6 +19,13 @@ body {
   font-family: 'Quicksand', sans-serif;
 }
 
+a {
+  all: unset;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
 .main-container {
   padding: 0 1rem;
   border: 1px solid #fff;
