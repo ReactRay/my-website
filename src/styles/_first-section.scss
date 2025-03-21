@@ -1,27 +1,27 @@
 $light: 4px 4px 20px #fff;
 
 .first-section {
+  position: relative; // 👈 important
   height: 100dvh;
   display: flex;
   justify-content: center;
+  align-items: center;
+  overflow: hidden; // hide extra canvas
 }
 
 .home-container {
   display: flex;
   justify-content: center;
-  align-items: center;
+  border-radius: 8px;
   padding: 1rem;
-  gap: 1rem;
 }
 
 .animated-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
-
   gap: 1rem;
   text-align: center;
-  width: 50%;
 
   h1 {
     font-size: 3rem;

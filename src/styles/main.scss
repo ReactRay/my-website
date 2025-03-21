@@ -1,6 +1,7 @@
 @use './image-box';
 @use './first-section';
 @use './nav';
+@use './projects';
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 
 * {
@@ -14,7 +15,7 @@ html {
 }
 
 body {
-  background-color: #333;
+  background-color: #585858;
   color: #fff;
   font-family: 'Quicksand', sans-serif;
 }
@@ -28,14 +29,13 @@ a {
 
 .main-container {
   padding: 0 1rem;
-  border: 1px solid #fff;
   width: 75%;
   margin: 0 auto;
 }
 
 @media (max-width: 768px) {
   .main-container {
-    width: 100%;
+    width: 95%;
     padding: 0;
   }
 }
