@@ -22,8 +22,26 @@ export function Comments() {
         const comment = await post(messege)
         setComments((prev) => [messege, ...prev,])
 
-        console.log(comment)
     }
+
+    function reorder(list, startIndex, endIndex) {
+        const result = Array.from(list)
+        const [removed] = result.splice(startIndex, 1)
+        result.splice(endIndex, 0, removed)
+        return result
+    }
+
+    function onDragEnd(result) {
+        if (!result.destination) return
+        const newComments = reorder(
+            comments,
+            result.source.index,
+            result.destination.index
+        )
+        setComments(newComments)
+    }
+
+
 
     return (
 
@@ -43,7 +61,7 @@ export function Comments() {
                 </div>
             </form>
 
-            <CommentsDisplay comments={comments} />
+            <CommentsDisplay comments={comments} onDragEnd={onDragEnd} />
         </div>
     )
 }

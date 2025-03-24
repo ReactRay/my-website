@@ -29,7 +29,7 @@ const ParticleBackground = () => {
                     },
                     modes: {
                         repulse: { distance: 100 },
-                        push: { quantity: 10 },
+                        push: { quantity: 2 },
                     },
                 },
                 particles: {

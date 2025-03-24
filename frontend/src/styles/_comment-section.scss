@@ -1,7 +1,6 @@
 .comment-section {
   height: 100dvh;
   border: 1px solid #fff;
-  text-align: center;
   padding: 1rem;
 }
 
@@ -26,4 +25,24 @@
       border: 3px solid rgb(157, 157, 165);
     }
   }
+}
+
+.comment-container {
+  border: 1px solid #fff;
+  margin-top: 1rem;
+  height: 400px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem 2rem;
+}
+
+.comment-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.comment-card {
+  background-color: rgb(181, 185, 184);
+  padding: 1rem 2rem;
 }
