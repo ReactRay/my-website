@@ -13,7 +13,6 @@ export function Home() {
     return (
         <div className="main-container">
             <ParticleBackground />
-            <h1>githubn</h1>
             <Nav />
 
             <Hero />

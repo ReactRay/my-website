@@ -16,8 +16,8 @@ const ParticleBackground = () => {
                 top: 0,
                 left: 0,
                 zIndex: -1,
-                width: "100dvh",
-                height: "100dvh",
+                width: "100vw",
+                height: "100vh",
             }}
             options={{
                 fullScreen: { enable: false },
@@ -29,7 +29,7 @@ const ParticleBackground = () => {
                     },
                     modes: {
                         repulse: { distance: 100 },
-                        push: { quantity: 2 },
+                        push: { quantity: 10 },
                     },
                 },
                 particles: {

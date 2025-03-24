@@ -1,16 +1,17 @@
 import './styles/main.scss'
 import { Route, HashRouter as Router, Routes } from 'react-router-dom'
 import { Home } from './Pages/Home'
-
+import ParticleBackground from './cmps/ParticleBackground'
 function App() {
-
   return (
-    <Router>
-      <Routes >
-        <Route path='/' element={<Home />} />
-        {/*something */}
-      </Routes>
-    </Router>
+    <div style={{ position: 'relative' }}>
+      <ParticleBackground />
+      <Router>
+        <Routes>
+          <Route path='/' element={<Home />} />
+        </Routes>
+      </Router>
+    </div>
   )
 }
 

@@ -1,10 +1,15 @@
 .projects-section {
-  height: 100dvh;
+  height: 200dvh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  padding: 1rem 0;
+
+  h2 {
+    font-size: 4rem;
+    font-weight: 300;
+    text-shadow: 4px 4px 20px #fff;
+  }
 
   ul {
     list-style: none;
@@ -32,6 +37,7 @@
 .project-card {
   position: relative;
   overflow: hidden;
+  height: 300px;
 
   &:hover {
     .overlay-content {
@@ -50,7 +56,6 @@
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
   z-index: -1;
   transition: all 1s ease-in-out;
 }
@@ -89,14 +94,15 @@
 
 @keyframes apear {
   0% {
-    filter: blur(20px);
+    filter: blur(10px);
   }
   45%,
   55% {
     filter: blur(0px);
+    transform: scale(1.05);
   }
   100% {
-    filter: blur(20px);
+    filter: blur(10px);
   }
 }
 
@@ -104,6 +110,9 @@
   .project-card-container {
     display: flex;
     flex-direction: column;
-    animation: none;
+  }
+
+  .projects-section {
+    height: 300dvh;
   }
 }

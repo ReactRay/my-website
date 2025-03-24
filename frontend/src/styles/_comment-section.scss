@@ -1,7 +1,12 @@
 .comment-section {
   height: 100dvh;
-  border: 1px solid #fff;
   padding: 1rem;
+
+  h2 {
+    font-size: 4rem;
+    font-weight: 300;
+    text-align: center;
+  }
 }
 
 .comment-form {
@@ -10,7 +15,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 90%;
   gap: 2rem;
   margin: 0 auto;
   padding: 3rem;
@@ -20,9 +24,10 @@
     padding: 0.5rem 1rem;
     border: 3px solid transparent;
     border-radius: 4px;
+    background-color: rgba($color: #fff, $alpha: 0.3);
 
     &:hover {
-      border: 3px solid rgb(157, 157, 165);
+      border: 3px solid rgb(209, 209, 212);
     }
   }
 }
@@ -43,6 +48,8 @@
 }
 
 .comment-card {
-  background-color: rgb(181, 185, 184);
+  background-color: rgba($color: #c4cecb, $alpha: 0.6);
+  backdrop-filter: blur(3px);
   padding: 1rem 2rem;
+  border-radius: 4px;
 }

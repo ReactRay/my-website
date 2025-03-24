@@ -28,6 +28,7 @@ export function Projects() {
     return (
 
         <div className="projects-section">
+            <h2>projects</h2>
             <div className="projects-container">
                 {projects.map((project) => {
                     return (
