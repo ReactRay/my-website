@@ -1,0 +1,24 @@
+.image-box {
+  background-color: #fff;
+  padding: 2rem 1rem;
+  text-align: center;
+  line-height: 1.5;
+  transform: scale(0.8);
+
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  box-shadow: 4px 4px 40px #e5e3e3;
+
+  h2 {
+    font-weight: 400;
+  }
+}
+.my-image {
+  width: 17em;
+  height: 12em;
+  border: 1px solid #eaeaea;
+}

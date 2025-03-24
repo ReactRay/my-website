@@ -1,0 +1,23 @@
+.nav {
+  padding: 1rem 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 90%;
+  margin: 0 auto;
+  z-index: 1;
+  ul {
+    display: flex;
+    list-style: none;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  li {
+    &:hover {
+      color: #d6bb8a;
+    }
+  }
+}

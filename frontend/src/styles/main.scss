@@ -1,0 +1,41 @@
+@use './image-box';
+@use './first-section';
+@use './nav';
+@use './projects';
+@use './comment-section';
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #636262;
+  color: #fff;
+  font-family: 'Quicksand', sans-serif;
+}
+
+a {
+  all: unset;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.main-container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .main-container {
+    width: 95%;
+    padding: 0;
+  }
+}
