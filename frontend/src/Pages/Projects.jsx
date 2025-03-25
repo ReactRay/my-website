@@ -30,10 +30,10 @@ export function Projects() {
         <div className="projects-section">
             <h2>projects</h2>
             <div className="projects-container">
-                {projects.map((project) => {
+                {projects.map((project, index) => {
                     return (
 
-                        <ProjectCard project={project} />
+                        <ProjectCard key={project.name + index} project={project} />
 
                     )
                 })}

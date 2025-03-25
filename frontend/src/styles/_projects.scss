@@ -1,12 +1,12 @@
 .projects-section {
-  height: 200dvh;
+  height: 150dvh;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   align-items: center;
+  gap: 3rem;
 
   h2 {
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 300;
     text-shadow: 4px 4px 20px #fff;
   }
@@ -100,9 +100,10 @@
   55% {
     filter: blur(0px);
     transform: scale(1.05);
+    box-shadow: 1px 1px 20px #fff;
   }
   100% {
-    filter: blur(10px);
+    filter: blur(20px);
   }
 }
 
@@ -113,6 +114,10 @@
   }
 
   .projects-section {
-    height: 300dvh;
+    height: 270dvh;
+
+    h2 {
+      font-size: 2rem;
+    }
   }
 }

@@ -12,14 +12,14 @@ const images = [
     { img: "https://res.cloudinary.com/danlxus36/image/upload/v1742863575/2_kzepiq.webp" }
 ];
 
-export function ImagePicker() {
+export function ImagePicker({ handleImageClick }) {
 
     return (
         <div className="image-picker">
-            {images.map((img) => {
+            {images.map((img, index) => {
                 return (
-                    <div>
-                        <img src={`${img.img}`} alt="img" width='50px' height='50px' />
+                    <div key={index + img.img}>
+                        <img src={`${img.img}`} alt="img" width='50px' height='50px' onClick={() => handleImageClick(img.img)} />
                     </div>
                 )
             })}

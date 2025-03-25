@@ -18,7 +18,6 @@ export function Home() {
             <Hero />
             <Projects />
             <Comments />
-            <ImagePicker />
         </div>
     )
 }
