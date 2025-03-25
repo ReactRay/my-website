@@ -1,0 +1,15 @@
+.image-picker {
+  display: flex;
+  flex-wrap: wrap;
+  width: 30%;
+  background-color: #fff;
+  justify-content: center;
+
+  img {
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.3);
+    }
+  }
+}

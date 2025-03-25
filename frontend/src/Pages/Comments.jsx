@@ -57,7 +57,7 @@ export function Comments() {
                     <input type="text" placeholder="say something nice" onChange={(e) => setMessege((prev) => ({ ...prev, text: e.target.value }))} />
                 </div>
                 <div>
-                    <button>click</button>
+                    <button>Submit</button>
                 </div>
             </form>
 

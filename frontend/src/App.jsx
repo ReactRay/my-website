@@ -5,7 +5,7 @@ import ParticleBackground from './cmps/ParticleBackground'
 function App() {
   return (
     <div style={{ position: 'relative' }}>
-      <ParticleBackground />
+      <ParticleBackground color={'#333'} />
       <Router>
         <Routes>
           <Route path='/' element={<Home />} />

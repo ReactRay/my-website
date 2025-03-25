@@ -6,18 +6,19 @@ import { Nav } from "../cmps/Nav.jsx"
 import { Projects } from "./Projects.jsx"
 import { Comments } from "./Comments.jsx"
 import ParticleBackground from "../cmps/ParticleBackground.jsx"
+import { ImagePicker } from "../cmps/ImagePicker.jsx"
 export function Home() {
 
 
 
     return (
         <div className="main-container">
-            <ParticleBackground />
             <Nav />
 
             <Hero />
             <Projects />
             <Comments />
+            <ImagePicker />
         </div>
     )
 }

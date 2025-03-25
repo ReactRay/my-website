@@ -10,37 +10,55 @@
 }
 
 .comment-form {
-  background-color: rgba($color: #fff, $alpha: 0.5);
-  backdrop-filter: blur(10px);
   display: flex;
-  justify-content: center;
   align-items: center;
   gap: 2rem;
   margin: 0 auto;
-  padding: 3rem;
   margin-top: 5rem;
 
   input {
-    padding: 0.5rem 1rem;
+    padding: 1rem 3rem;
     border: 3px solid transparent;
     border-radius: 4px;
     background-color: rgba($color: #fff, $alpha: 0.3);
+    color: #fff;
+
+    &::placeholder {
+      color: #fff;
+    }
 
     &:hover {
       border: 3px solid rgb(209, 209, 212);
     }
   }
+
+  button {
+    border: none;
+    padding: 0.5rem 1rem;
+    background-color: #333;
+    color: #fff;
+    border: 1px solid transparent;
+    transition: all 0.7s ease-in-out;
+    font-weight: 300;
+    font-size: 1rem;
+    font-family: 'quicksand', sans-serif;
+
+    &:hover {
+      border: 1px solid #fff;
+    }
+  }
 }
 
 .comment-container {
-  border: 1px solid #fff;
+  background-color: rgba($color: #fff, $alpha: 0.2);
   margin-top: 1rem;
-  height: 400px;
+  height: 50%;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
   gap: 1rem;
   padding: 1rem 2rem;
+  border-radius: 4px;
 }
 
 .comment-container::-webkit-scrollbar {
@@ -48,8 +66,18 @@
 }
 
 .comment-card {
-  background-color: rgba($color: #c4cecb, $alpha: 0.6);
+  background-color: rgba($color: #4c4e4e, $alpha: 0.6);
   backdrop-filter: blur(3px);
   padding: 1rem 2rem;
   border-radius: 4px;
+}
+
+@media (max-width: 700px) {
+  .comment-form {
+    display: flex;
+    flex-direction: column;
+  }
+  .comment-section {
+    height: auto;
+  }
 }

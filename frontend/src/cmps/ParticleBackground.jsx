@@ -2,7 +2,7 @@ import React from "react";
 import Particles from "react-tsparticles";
 import { loadSlim } from "tsparticles-slim";
 
-const ParticleBackground = () => {
+const ParticleBackground = ({ color }) => {
     const particlesInit = async (engine) => {
         await loadSlim(engine);
     };
@@ -21,7 +21,7 @@ const ParticleBackground = () => {
             }}
             options={{
                 fullScreen: { enable: false },
-                background: { color: { value: "#333" } },
+                background: { color: { value: `${color}` } },
                 interactivity: {
                     events: {
                         onHover: { enable: true, mode: "repulse" },
