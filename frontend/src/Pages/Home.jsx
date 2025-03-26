@@ -7,6 +7,7 @@ import { Projects } from "./Projects.jsx"
 import { Comments } from "./Comments.jsx"
 import ParticleBackground from "../cmps/ParticleBackground.jsx"
 import { ImagePicker } from "../cmps/ImagePicker.jsx"
+import { ContactMe } from "./ContactMe.jsx"
 export function Home() {
 
 
@@ -18,6 +19,7 @@ export function Home() {
             <Hero />
             <Projects />
             <Comments />
+            <ContactMe />
         </div>
     )
 }
