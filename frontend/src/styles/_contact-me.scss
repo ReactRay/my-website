@@ -37,8 +37,13 @@
       color: #fff;
     }
 
+    &:focus {
+      box-shadow: 1px 1px 20px rgba($color: #fff, $alpha: 0.5);
+    }
+
     &:hover {
-      border: 3px solid rgb(209, 209, 212);
+      border: 1px solid rgb(209, 209, 212);
+      box-shadow: 1px 1px 20px rgba($color: #fff, $alpha: 0.5);
     }
   }
 
@@ -57,7 +62,18 @@
     }
 
     &:hover {
-      border: 3px solid rgb(209, 209, 212);
+      border: 1px solid rgb(209, 209, 212);
+      box-shadow: 1px 1px 20px rgba($color: #fff, $alpha: 0.5);
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .contact-form {
+    .input-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
     }
   }
 }
