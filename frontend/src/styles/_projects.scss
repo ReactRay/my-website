@@ -42,7 +42,7 @@
 .project-card {
   position: relative;
   overflow: hidden;
-  min-height: 200px;
+  min-height: 300px;
   &:hover {
     .overlay-content {
       opacity: 1;
@@ -62,6 +62,12 @@
   height: 100%;
   z-index: -1;
   transition: all 1s ease-in-out;
+}
+
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
 }
 
 .overlay-content {
@@ -117,18 +123,22 @@
     flex-direction: column;
   }
 
+  .projects-container {
+    gap: 0.5rem;
+  }
+
   @keyframes apear {
     0% {
+      filter: blur(10px);
     }
     45%,
     55% {
-      transform: scale(1.05);
-      box-shadow: 1px 1px 20px #fff;
+      filter: blur(0px);
     }
     100% {
+      filter: blur(20px);
     }
   }
-
   .projects-section {
     h2 {
       font-size: 2rem;
