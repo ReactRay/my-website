@@ -3,6 +3,7 @@ import { CommentsDisplay } from "../cmps/CommentsDisplay"
 import { query, post } from "../services/comment.actions"
 import { ImagePicker } from "../cmps/ImagePicker.jsx"
 import { Popover } from "@mui/material"
+import { Element } from "react-scroll"
 
 export function Comments() {
 
@@ -67,7 +68,7 @@ export function Comments() {
 
     return (
 
-        <div className="comment-section">
+        <Element name="comments" className="comment-section">
             <h2>say something nice 😊</h2>
             <form className="comment-form" onSubmit={handleSubmit}>
                 <div>
@@ -98,6 +99,6 @@ export function Comments() {
             >
                 <ImagePicker handleImageClick={handleImageClick} />
             </Popover>
-        </div>
+        </Element>
     )
 }

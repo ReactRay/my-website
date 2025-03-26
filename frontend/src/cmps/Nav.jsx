@@ -1,3 +1,4 @@
+import { Link } from 'react-scroll';
 
 
 
@@ -11,11 +12,18 @@ export function Nav() {
 
             <ul>
 
-                <li>Projects</li>
+
+                <Link to="projects" smooth={true} duration={500}>
+                    Projects
+                </Link>
                 |
-                <li>Contact me</li>
+                <Link to="comments" smooth={true} duration={500}>
+                    Surprise
+                </Link>
                 |
-                <li>About me</li>
+                <Link to="contact-me" smooth={true} duration={500}>
+                    Contact me
+                </Link>
 
 
             </ul>

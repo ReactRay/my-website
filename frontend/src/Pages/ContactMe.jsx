@@ -1,3 +1,4 @@
+import { Element } from 'react-scroll';
 
 
 
@@ -9,9 +10,9 @@ export function ContactMe() {
 
     return (
 
-        <div className="contact-container">
+        <Element name='contact-me' className="contact-container">
             <h2>Contact me </h2>
-            <form className="contact-form">
+            <form className="contact-form" data-aos="fade-down">
 
                 <div className="input-container">
                     <input type="text" placeholder="your name" />
@@ -24,6 +25,6 @@ export function ContactMe() {
 
             </form>
 
-        </div>
+        </Element>
     )
 }

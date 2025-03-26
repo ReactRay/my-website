@@ -1,5 +1,5 @@
 import { ProjectCard } from "../cmps/ProjectCard";
-
+import { Element } from 'react-scroll';
 
 
 export function Projects() {
@@ -27,9 +27,9 @@ export function Projects() {
 
     return (
 
-        <div className="projects-section">
+        <Element name="projects" className="projects-section">
             <h2>projects</h2>
-            <div className="projects-container">
+            <div className="projects-container" >
                 {projects.map((project, index) => {
                     return (
 
@@ -40,7 +40,7 @@ export function Projects() {
 
             </div>
 
-        </div>
+        </Element>
 
     )
 }

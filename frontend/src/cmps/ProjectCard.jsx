@@ -19,7 +19,7 @@ export function ProjectCard({ project }) {
             </div>
 
             <div className="project-text">
-                <h2>{project.name}</h2>
+                <h3>{project.name}</h3>
                 <p>{project.description}</p>
                 <ul>
                     {project.technologies.map((tech) => {

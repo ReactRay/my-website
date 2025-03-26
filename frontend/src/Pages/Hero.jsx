@@ -14,7 +14,7 @@ export function Hero() {
     return (
         <div className="first-section">
             <div className="home-container">
-                <div className="animated-text">
+                <div className="animated-text" data-aos="fade-down">
                     <h1>hello ,im Radwan <hr /> <Typewriter {...props} /></h1>
                     <h3>welcome to my website</h3>
                     <div className="link-box">

@@ -2,7 +2,20 @@ import './styles/main.scss'
 import { Route, HashRouter as Router, Routes } from 'react-router-dom'
 import { Home } from './Pages/Home'
 import ParticleBackground from './cmps/ParticleBackground'
+import { useEffect } from 'react'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 function App() {
+
+
+  // In App.jsx or index.js
+
+
+  useEffect(() => {
+    AOS.init({ duration: 3000, once: false });
+  }, []);
+
+
   return (
     <div style={{ position: 'relative' }}>
       <ParticleBackground color={'#333'} />

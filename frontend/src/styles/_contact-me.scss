@@ -3,9 +3,10 @@
   align-items: center;
   flex-direction: column;
   margin-top: 4rem;
+  gap: 3rem;
 
   h2 {
-    font-size: clamp(1rem, 8dvh, 5rem);
+    font-size: 3rem;
     font-weight: 300;
     text-shadow: 4px 4px 20px #fff;
   }
