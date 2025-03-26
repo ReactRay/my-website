@@ -1,9 +1,8 @@
 .projects-section {
-  height: 150dvh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 3rem;
+  gap: 4rem;
 
   h2 {
     font-size: 3rem;
@@ -37,8 +36,7 @@
 .project-card {
   position: relative;
   overflow: hidden;
-  height: 300px;
-
+  min-height: 200px;
   &:hover {
     .overlay-content {
       opacity: 1;
@@ -113,9 +111,19 @@
     flex-direction: column;
   }
 
-  .projects-section {
-    height: 270dvh;
+  @keyframes apear {
+    0% {
+    }
+    45%,
+    55% {
+      transform: scale(1.05);
+      box-shadow: 1px 1px 20px #fff;
+    }
+    100% {
+    }
+  }
 
+  .projects-section {
     h2 {
       font-size: 2rem;
     }

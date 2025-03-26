@@ -1,10 +1,8 @@
 .contact-container {
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-direction: column;
-  gap: 5rem;
-  min-height: 50dvh;
+  margin-top: 4rem;
 
   h2 {
     font-size: clamp(1rem, 8dvh, 5rem);
@@ -14,13 +12,15 @@
 }
 
 .contact-form {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 1rem;
-  align-items: center;
-  justify-content: center;
+  width: 100%;
+  margin-bottom: 3rem;
   .input-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
     gap: 2rem;
   }
 
@@ -43,12 +43,13 @@
 
   textarea {
     padding: 1rem 3rem;
-    min-width: 557px;
-    border: 3px solid transparent;
     border-radius: 4px;
     background-color: rgba($color: #fff, $alpha: 0.3);
     color: #fff;
     transition: all 0.5s ease-in-out;
+    width: 100%;
+    margin: 0 auto;
+    min-height: 10rem;
 
     &::placeholder {
       color: #fff;

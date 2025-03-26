@@ -20,6 +20,7 @@ const ParticleBackground = ({ color }) => {
                 height: "100vh",
             }}
             options={{
+
                 fullScreen: { enable: false },
                 background: { color: { value: `${color}` } },
                 interactivity: {
@@ -29,7 +30,7 @@ const ParticleBackground = ({ color }) => {
                     },
                     modes: {
                         repulse: { distance: 100 },
-                        push: { quantity: 10 },
+                        push: { quantity: 4 },
                     },
                 },
                 particles: {
@@ -38,6 +39,16 @@ const ParticleBackground = ({ color }) => {
                     links: { enable: true, distance: 150, color: "#fff", opacity: 0.5 },
                     move: { enable: true, speed: 1.5 },
                 },
+                move: {
+                    enable: true,
+                    speed: 1,
+                    direction: "none",
+                    outModes: { default: "bounce" },
+                    random: true,
+                    straight: false,
+                },
+
+
             }}
         />
 
