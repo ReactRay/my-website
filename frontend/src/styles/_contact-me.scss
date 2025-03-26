@@ -27,7 +27,7 @@
 
   input {
     padding: 1rem 3rem;
-    border: 3px solid transparent;
+    border: 1px solid transparent;
     border-radius: 4px;
     background-color: rgba($color: #fff, $alpha: 0.3);
     color: #fff;
@@ -49,6 +49,8 @@
 
   textarea {
     padding: 1rem 3rem;
+    border: 1px solid transparent;
+
     border-radius: 4px;
     background-color: rgba($color: #fff, $alpha: 0.3);
     color: #fff;
