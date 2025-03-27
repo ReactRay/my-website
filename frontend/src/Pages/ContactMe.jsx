@@ -38,11 +38,11 @@ export function ContactMe() {
             <form className="contact-form" data-aos="fade-down" onSubmit={handleSubmit}>
 
                 <div className="input-container">
-                    <input type="text" placeholder="your name" name='name' onChange={handleChange} />
-                    <input type="email" placeholder="your email" name='emailFrom' onChange={handleChange} />
+                    <input value={content.name} type="text" placeholder="your name" name='name' onChange={handleChange} />
+                    <input value={content.emailFrom} type="email" placeholder="your email" name='emailFrom' onChange={handleChange} />
                 </div>
                 <div>
-                    <textarea name="message" placeholder="your messege" onChange={handleChange}></textarea>
+                    <textarea value={content.message} name="message" placeholder="your messege" onChange={handleChange}></textarea>
                 </div>
 
                 <div>
