@@ -17,3 +17,13 @@ export async function post(body) {
     throw error
   }
 }
+
+export async function emailMe(body) {
+  try {
+    const response = await httpService.post('comments/contact', body)
+
+    return response
+  } catch (error) {
+    throw error
+  }
+}

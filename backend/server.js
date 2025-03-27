@@ -1,8 +1,12 @@
 import express from 'express'
 import cors from 'cors'
+import dotenv from 'dotenv' // Correct import for dotenv
 import { commentRoutes } from './api/comment.routes.js'
+import { sendEmail } from './services/nodeMailer.service.js'
 
 const app = express()
+
+dotenv.config()
 
 const corsOptions = {
   origin: ['http://127.0.0.1:5173', 'http://localhost:5173'],
