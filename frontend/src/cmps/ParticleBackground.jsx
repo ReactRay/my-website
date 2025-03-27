@@ -26,7 +26,7 @@ const ParticleBackground = ({ color }) => {
                 interactivity: {
                     events: {
                         onHover: { enable: true, mode: "repulse" },
-                        onClick: { enable: true, mode: "push" },
+                        onClick: { enable: false, mode: "push" },
                     },
                     modes: {
                         repulse: { distance: 100 },
@@ -34,7 +34,7 @@ const ParticleBackground = ({ color }) => {
                     },
                 },
                 particles: {
-                    number: { value: 50 },
+                    number: { value: 30 },
                     color: { value: "#fff" },
                     links: { enable: true, distance: 150, color: "#fff", opacity: 0.5 },
                     move: { enable: true, speed: 1.5 },

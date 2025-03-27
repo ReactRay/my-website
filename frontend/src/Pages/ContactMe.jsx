@@ -1,6 +1,7 @@
 import { Element } from 'react-scroll';
 import { useState } from 'react';
 import { emailMe } from '../services/comment.actions';
+import { showErrorMsg, showSuccessMsg } from '../services/event-bus.service';
 
 
 export function ContactMe() {
@@ -21,12 +22,15 @@ export function ContactMe() {
     function handleSubmit(e) {
         e.preventDefault()
 
-        if (!content.message || !content.name)
+        if (!content.message || !content.name || !content.emailFrom) {
+            showErrorMsg('Please fill all the inputs ')
             return
+        }
 
         const response = emailMe(content)
 
         setContent({ emailFrom: '', message: '', name: '' })
+        showSuccessMsg(`Thank you for sending me a message ${content.name}!`)
     }
 
 

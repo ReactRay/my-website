@@ -1,0 +1,49 @@
+@keyframes slideIn {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.user-msg {
+  position: fixed;
+  top: 4rem;
+  right: 0;
+  padding: 1rem 2rem;
+  display: flex;
+  gap: 2rem;
+
+  animation: slideIn 0.5s ease-out forwards;
+
+  button {
+    width: 20%;
+    font-size: 1rem;
+  }
+}
+
+.success {
+  background-color: rgba($color: #333, $alpha: 0.5);
+  color: #fff;
+  border: 1px solid #fff;
+  box-shadow: 4px 4px 20px rgba($color: #fff, $alpha: 0.3);
+}
+
+.error {
+  background-color: coral;
+  color: #fff;
+}
+
+.user-msg.fade-out {
+  animation: fadeOut 2s ease forwards;
+}

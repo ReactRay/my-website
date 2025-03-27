@@ -1,7 +1,7 @@
 import { ProfileImage } from "../cmps/ProfileImage"
 import { Typewriter } from 'react-simple-typewriter'
 import ParticleBackground from "../cmps/ParticleBackground.jsx"
-
+import { showSuccessMsg } from "../services/event-bus.service.js"
 export function Hero() {
     const props = {
         words: ['Web Developer', 'Tutor', 'YouTuber'],
@@ -10,6 +10,8 @@ export function Hero() {
         loop: false,
         cursor: true,
     }
+
+
 
     return (
         <div className="first-section">

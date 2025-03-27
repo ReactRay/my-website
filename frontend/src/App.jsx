@@ -5,6 +5,7 @@ import ParticleBackground from './cmps/ParticleBackground'
 import { useEffect } from 'react'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { UserMsg } from './cmps/UserMsg'
 function App() {
 
 
@@ -24,6 +25,7 @@ function App() {
           <Route path='/' element={<Home />} />
         </Routes>
       </Router>
+      <UserMsg />
     </div>
   )
 }

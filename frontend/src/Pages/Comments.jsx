@@ -4,6 +4,7 @@ import { query, post } from "../services/comment.actions"
 import { ImagePicker } from "../cmps/ImagePicker.jsx"
 import { Popover } from "@mui/material"
 import { Element } from "react-scroll"
+import { showSuccessMsg } from "../services/event-bus.service.js"
 
 export function Comments() {
 
@@ -33,6 +34,8 @@ export function Comments() {
         e.preventDefault()
         const comment = await post(messege)
         setComments((prev) => [messege, ...prev,])
+        showSuccessMsg(`thank you for posting ${messege.user} !`)
+        setMessege({ user: '', text: '', img: "https://res.cloudinary.com/danlxus36/image/upload/v1742863576/4_dstrzt.png" })
 
     }
 
@@ -51,6 +54,7 @@ export function Comments() {
             result.destination.index
         )
         setComments(newComments)
+        showSuccessMsg('dragged successfully!')
     }
 
     function handleImageClick(img) {
@@ -69,15 +73,15 @@ export function Comments() {
     return (
 
         <Element name="comments" className="comment-section">
-            <h2>say something nice 😊</h2>
+            <h2>say something nice </h2>
             <form className="comment-form" onSubmit={handleSubmit}>
                 <div>
 
 
-                    <input type="text" placeholder="your name" onChange={(e) => setMessege((prev) => ({ ...prev, user: e.target.value }))} />
+                    <input value={messege.user} type="text" placeholder="your name" onChange={(e) => setMessege((prev) => ({ ...prev, user: e.target.value }))} />
                 </div>
                 <div>
-                    <input type="text" placeholder="say something nice" onChange={(e) => setMessege((prev) => ({ ...prev, text: e.target.value }))} />
+                    <input value={messege.text} type="text" placeholder="say something nice" onChange={(e) => setMessege((prev) => ({ ...prev, text: e.target.value }))} />
                 </div>
                 <div><img onClick={handleClick} className="img-picker-btn" src={messege.img} alt="img" width={'50px'} height={'50px'} /></div>
                 <div>
