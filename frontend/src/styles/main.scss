@@ -19,7 +19,7 @@ html {
 }
 
 body {
-  background-color: #636262;
+  background-color: #3d3d3e;
   color: #fff;
   font-family: 'Quicksand', sans-serif;
 }
@@ -40,5 +40,9 @@ a {
   .main-container {
     width: 95%;
     padding: 0;
+  }
+
+  .particles {
+    display: none;
   }
 }

@@ -8,50 +8,51 @@ const ParticleBackground = ({ color }) => {
     };
 
     return (
-        <Particles
-            id="tsparticles"
-            init={particlesInit}
-            style={{
-                position: "absolute",
-                top: 0,
-                left: 0,
-                zIndex: -1,
-                width: "100vw",
-                height: "100vh",
-            }}
-            options={{
+        <div className="particles">
+            <Particles
+                id="tsparticles"
+                init={particlesInit}
+                style={{
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    zIndex: -1,
+                    width: "100vw",
+                    height: "100vh",
+                }}
+                options={{
 
-                fullScreen: { enable: false },
-                background: { color: { value: `${color}` } },
-                interactivity: {
-                    events: {
-                        onHover: { enable: true, mode: "repulse" },
-                        onClick: { enable: false, mode: "push" },
+                    fullScreen: { enable: false },
+                    background: { color: { value: `${color}` } },
+                    interactivity: {
+                        events: {
+                            onHover: { enable: true, mode: "repulse" },
+                            onClick: { enable: true, mode: "push" },
+                        },
+                        modes: {
+                            repulse: { distance: 100 },
+                            push: { quantity: 4 },
+                        },
                     },
-                    modes: {
-                        repulse: { distance: 100 },
-                        push: { quantity: 4 },
+                    particles: {
+                        number: { value: 70 },
+                        color: { value: "#fff" },
+                        links: { enable: true, distance: 150, color: "#fff", opacity: 0.5 },
+                        move: { enable: true, speed: 1.5 },
                     },
-                },
-                particles: {
-                    number: { value: 30 },
-                    color: { value: "#fff" },
-                    links: { enable: true, distance: 150, color: "#fff", opacity: 0.5 },
-                    move: { enable: true, speed: 1.5 },
-                },
-                move: {
-                    enable: true,
-                    speed: 1,
-                    direction: "none",
-                    outModes: { default: "bounce" },
-                    random: true,
-                    straight: false,
-                },
+                    move: {
+                        enable: true,
+                        speed: 1,
+                        direction: "none",
+                        outModes: { default: "bounce" },
+                        random: true,
+                        straight: false,
+                    },
 
 
-            }}
-        />
-
+                }}
+            />
+        </div>
 
     );
 };

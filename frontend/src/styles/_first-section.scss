@@ -23,6 +23,7 @@ $light: 4px 4px 20px #fff;
   background-color: rgba($color: #fff, $alpha: 0.2);
   backdrop-filter: blur(3px);
   padding: 2em 7rem;
+  box-shadow: 4px 4px 20px #5e5c5c;
 
   h1 {
     font-size: 4rem;
@@ -52,10 +53,17 @@ $light: 4px 4px 20px #fff;
     border: 1px solid #8e8e8e;
     padding: 0.5rem 1rem;
     transition: all 0.5s ease-in-out;
+
+    &:hover {
+      border: 1px solid #fff;
+    }
   }
 }
 
 @media (max-width: 768px) {
+  .animated-text {
+    padding: 2rem 1rem;
+  }
   .home-container {
     flex-direction: column;
     justify-content: center;
