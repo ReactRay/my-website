@@ -25,7 +25,6 @@
     li {
       color: #e7e4e4;
       font-size: 1rem;
-      border: 1px solid #fff;
       padding: 0.5rem 0.8rem;
     }
   }
@@ -74,6 +73,7 @@
   position: relative;
   z-index: 1;
   background-color: transparent;
+  height: 100%;
   color: #fff;
   display: flex;
   padding: 1rem;

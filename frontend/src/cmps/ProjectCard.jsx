@@ -13,8 +13,8 @@ export function ProjectCard({ project }) {
             <div className="project-card">
                 <img src={project.img} alt="background" className="bg-image" />
                 <div className="overlay-content">
-                    <a href="#">Demo</a>
-                    <a href="#">Github</a>
+                    <a href={project.demo} target="_blank" rel="noopener noreferrer">Demo</a>
+                    <a href={project.github} target="_blank" rel="noopener noreferrer">Github</a>
                 </div>
             </div>
 
