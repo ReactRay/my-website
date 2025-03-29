@@ -21,8 +21,8 @@ export function Hero() {
                     <h1>hello ,im Radwan <hr /> <Typewriter {...props} /></h1>
                     <h3>welcome to my website</h3>
                     <div className="link-box">
-                        <a href="/Radwan_Mansur_CV.pdf" download="Radwan_Mansur_CV.pdf">Download CV</a>
-                        <Link to="projects">Projects</Link>
+                        <a onClick={() => { showSuccessMsg('Resume Downloaded!') }} href="/Radwan_Mansur_CV.pdf" download="Radwan_Mansur_CV.pdf">Download CV</a>
+                        <Link onClick={() => showSuccessMsg('Welcome to Projects')} to="projects">Projects</Link>
                     </div>
                 </div>
 

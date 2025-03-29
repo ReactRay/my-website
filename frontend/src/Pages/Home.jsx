@@ -6,6 +6,7 @@ import { Nav } from "../cmps/Nav.jsx"
 import { Projects } from "./Projects.jsx"
 import { Comments } from "./Comments.jsx"
 import { ContactMe } from "./ContactMe.jsx"
+import { Footer } from "./Footer.jsx"
 export function Home() {
 
 
@@ -21,6 +22,7 @@ export function Home() {
             <Projects />
             <Comments />
             <ContactMe />
+            <Footer />
         </div>
     )
 }
