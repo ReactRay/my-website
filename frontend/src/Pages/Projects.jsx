@@ -23,7 +23,7 @@ export function Projects() {
         {
             name: "Todos",
             description: "A simple todo app with full CRUD functionality. Built to help users stay productive and organized.",
-            technologies: ["React", "Express", "MongoDB"],
+            technologies: ["React"],
             img: "/todo.png",
             github: 'https://github.com/ReactRay/RM-TODOS',
             demo: 'https://reactray.github.io/RM-TODOS/'

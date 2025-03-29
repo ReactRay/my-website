@@ -30,6 +30,11 @@ export function ProjectCard({ project }) {
                         )
                     })}
                 </ul>
+
+                <div className="project-links-mobile">
+                    <a href={project.demo} target="_blank" rel="noopener noreferrer">Demo</a>
+                    <a href={project.github} target="_blank" rel="noopener noreferrer">Github</a>
+                </div>
             </div>
         </div>
     )

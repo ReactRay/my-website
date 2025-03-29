@@ -13,15 +13,15 @@ export function Nav() {
             <ul>
 
 
-                <Link to="projects" smooth={true} duration={500}>
+                <Link className='nav-link' to="projects" smooth={true} duration={500}>
                     Projects
                 </Link>
                 |
-                <Link to="comments" smooth={true} duration={500}>
+                <Link className='nav-link' to="comments" smooth={true} duration={500}>
                     Surprise
                 </Link>
                 |
-                <Link to="contact-me" smooth={true} duration={500}>
+                <Link className='nav-link' to="contact-me" smooth={true} duration={500}>
                     Contact me
                 </Link>
 

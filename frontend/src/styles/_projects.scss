@@ -21,12 +21,6 @@
     display: flex;
     gap: 1rem;
     padding: 1rem 0;
-
-    li {
-      color: #e7e4e4;
-      font-size: 1rem;
-      padding: 0.5rem 0.8rem;
-    }
   }
 }
 
@@ -84,7 +78,7 @@
   transition: all 1s ease-in-out;
 
   a {
-    padding: 0.5rem 1rem;
+    padding: 1rem 2rem;
     background-color: rgba($color: #908d8d, $alpha: 0.5);
   }
 }
@@ -142,6 +136,24 @@
   .projects-section {
     h2 {
       font-size: 2rem;
+    }
+  }
+}
+
+.project-links-mobile {
+  display: flex;
+  gap: 1rem;
+
+  a {
+    padding: 0.4rem 1.1rem;
+    background-color: rgba($color: #333, $alpha: 0.6);
+    transition: all 0.5s ease-in-out;
+    border: 1px solid transparent;
+
+    &:hover {
+      border: 1px solid #fff;
+
+      box-shadow: 4px 4px 20px rgba($color: #fff, $alpha: 0.6);
     }
   }
 }

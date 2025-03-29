@@ -16,9 +16,18 @@
     align-items: center;
   }
 
-  li {
+  .nav-link {
+    margin: 0 10px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: color 0.4s;
+
     &:hover {
       color: #d6bb8a;
+    }
+
+    .active {
+      border-bottom: 2px solid #ffffff;
     }
   }
 }
