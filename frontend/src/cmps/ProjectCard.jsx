@@ -1,9 +1,7 @@
 
-
-
+import { Link } from "react-router-dom"
 
 export function ProjectCard({ project }) {
-
 
 
 
@@ -19,7 +17,7 @@ export function ProjectCard({ project }) {
             </div>
 
             <div className="project-text">
-                <h3>{project.name}</h3>
+                <h3 >{project.name}</h3>
                 <p>{project.description}</p>
                 <ul>
                     {project.technologies.map((tech) => {
@@ -34,8 +32,10 @@ export function ProjectCard({ project }) {
                 <div className="project-links-mobile">
                     <a href={project.demo} target="_blank" rel="noopener noreferrer">Demo</a>
                     <a href={project.github} target="_blank" rel="noopener noreferrer">Github</a>
+                    <Link to={`${project.id}`}>More Details</Link>
                 </div>
             </div>
+
         </div>
     )
 

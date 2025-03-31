@@ -7,7 +7,8 @@ import { Projects } from "./Projects.jsx"
 import { Comments } from "./Comments.jsx"
 import { ContactMe } from "./ContactMe.jsx"
 import { Footer } from "./Footer.jsx"
-export function Home() {
+import { ProjectVideo } from "../cmps/ProjectVideo.jsx"
+export function Home({ projects }) {
 
 
 
@@ -17,9 +18,8 @@ export function Home() {
     return (
         <div className="main-container">
             <Nav />
-
             <Hero />
-            <Projects />
+            <Projects projects={projects} />
             <Comments />
             <ContactMe />
             <Footer />

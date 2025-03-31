@@ -4,7 +4,7 @@ export function CommentCard({ user, text, img }) {
 
 
     return (
-        <div className="comment-card">
+        <div className="comment-card " >
             <div className="img-card">
                 <img src={img} alt="img" />
             </div>
