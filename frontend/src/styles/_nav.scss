@@ -36,5 +36,9 @@
   .nav {
     font-size: 0.8rem;
     background-color: rgba($color: #333, $alpha: 0.2);
+
+    ul {
+      gap: 2rem;
+    }
   }
 }
