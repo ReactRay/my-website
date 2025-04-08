@@ -31,6 +31,19 @@ function App() {
       imgArr: ['https://res.cloudinary.com/danlxus36/image/upload/v1743385875/someday3_mkqprj.png', 'https://res.cloudinary.com/danlxus36/image/upload/v1743385875/someday1_jtut0n.png', 'https://res.cloudinary.com/danlxus36/image/upload/v1743385875/someday4_bnzz8p.png']
     },
     {
+      id: '/talkyWocky',
+      name: "TalkyWocky",
+      description: "A chat app with responsive layout and a wide array of themes to choose from , providing quick live chat supporting text and image transfer.",
+      technologies: ["React", "Express", "MongoDB"],
+      img: "/chatty2.png",
+      github: 'https://github.com/ReactRay/chatty',
+      demo: 'https://chatty-8q6m.onrender.com',
+      videoId: '376c5b19c5ea4a12bf4d8926f9e1c71f',
+      imgArr: ['https://res.cloudinary.com/danlxus36/image/upload/v1744071823/chatty1_pgoytq.png', 'https://res.cloudinary.com/danlxus36/image/upload/v1744071823/chatty5_zphy48.png',
+        'https://res.cloudinary.com/danlxus36/image/upload/v1744071823/chatty3_qrdvxy.png']
+
+    },
+    {
       id: '/missBugs',
       name: "MissBugs",
       description: "A bug tracking system where users can report, update, and manage bugs. Full CRUD with a clean UI.",
@@ -67,8 +80,9 @@ function App() {
 
           <Route path='/' element={<Home projects={projects} />} />
           <Route path='/someday' element={<ProjectDetails project={projects[0]} />} />
-          <Route path='/missBugs' element={<ProjectDetails project={projects[1]} />} />
-          <Route path='/todos' element={<ProjectDetails project={projects[2]} />} />
+          <Route path='/talkyWocky' element={<ProjectDetails project={projects[1]} />} />
+          <Route path='/missBugs' element={<ProjectDetails project={projects[2]} />} />
+          <Route path='/todos' element={<ProjectDetails project={projects[3]} />} />
         </Routes>
       </Router>
       <UserMsg />
