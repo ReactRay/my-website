@@ -38,7 +38,7 @@ function App() {
       img: "/chatify.png",
       github: 'https://github.com/ReactRay/Chatify',
       demo: 'https://chatify-na41.onrender.com',
-      video: "chatify.mkv",
+      video: "https://res.cloudinary.com/danlxus36/video/upload/v1744718299/chaitfy_iwblmy.mp4",
       imgArr: ['https://res.cloudinary.com/danlxus36/image/upload/v1744712597/chatify_c0lu2l.png',
         'https://res.cloudinary.com/danlxus36/image/upload/v1744712597/chatify3_dcyp2r.png'
         , 'https://res.cloudinary.com/danlxus36/image/upload/v1744712597/chatify4_bsfppn.png']

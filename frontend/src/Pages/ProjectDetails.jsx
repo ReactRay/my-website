@@ -22,10 +22,13 @@ export function ProjectDetails({ project }) {
                 </div>
                 <div className="Video">
                     {project.videoId && <ProjectVideo video={project.videoId} />}
-                    {project.video && <video controls width={'100%'}>
-                        <source src="/chatify.mkv" type="video/mkv" />
-                        Your browser does not support the video tag.
-                    </video>}
+                    {project.video && (
+                        <video controls width="100%">
+                            <source src={project.video} type="video/mp4" />
+                            Your browser does not support the video tag.
+                        </video>
+                    )}
+
                 </div>
                 <div className="details">
                     <h3>{project.name}</h3>
