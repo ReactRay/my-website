@@ -111,10 +111,12 @@
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 764px) {
   .comment-form {
     display: flex;
     flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
   }
   .comment-section {
     height: auto;

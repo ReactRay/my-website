@@ -19,6 +19,7 @@
   ul {
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
     padding: 1rem 0;
   }
@@ -26,7 +27,7 @@
 
 .project-card-container {
   display: grid;
-  grid-template-columns: 2fr 4fr;
+  grid-template-columns: 1fr 2fr;
   margin-bottom: 1rem;
   animation: apear both;
   transition: all 0.5s ease-in-out;
@@ -132,11 +133,12 @@
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 764px) {
+ 
+  
   .project-card-container {
     display: flex;
     flex-direction: column;
-    animation: none;
   }
 
   .projects-container {
@@ -157,11 +159,15 @@
 
   @keyframes apear {
     0% {
+     transform: scale(0.6);
+
       filter: blur(10px);
     }
     45%,
     55% {
       filter: blur(0px);
+          transform: scale(1.05);
+    box-shadow: 4px 4px 20px #5e5c5c;
     }
     100% {
       filter: blur(20px);
