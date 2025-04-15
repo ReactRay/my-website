@@ -23,7 +23,7 @@ function App() {
       id: '/someday',
       name: "Someday (Monday Clone)",
       description: "A task management app inspired by Monday.com. Features Kanban boards, draggable tasks, and group management.",
-      technologies: ["React", "Express", "MongoDB"],
+      technologies: ["React", "Redux", "Express", "Sockets io", "MongoDB"],
       img: "/someday.png",
       github: 'https://github.com/ReactRay/SomeDay',
       demo: 'https://someday-n1ze.onrender.com',
@@ -31,10 +31,23 @@ function App() {
       imgArr: ['https://res.cloudinary.com/danlxus36/image/upload/v1743385875/someday3_mkqprj.png', 'https://res.cloudinary.com/danlxus36/image/upload/v1743385875/someday1_jtut0n.png', 'https://res.cloudinary.com/danlxus36/image/upload/v1743385875/someday4_bnzz8p.png']
     },
     {
+      id: '/chatify',
+      name: "Chatify (Spotify Clone + Chat)",
+      description: "a real-time music streaming web app — a modern Spotify-style clone that allows users to listen to music, chat live, and see what others are playing. Admins can upload albums and tracks to be shared across all users. This app does not use Spotify or YouTube APIs — all music is hosted and managed directly.",
+      technologies: ["React", "Zustand", "Express", "Sockets io", "MongoDB", "Mongoose", "Clerk",],
+      img: "/chatify.png",
+      github: 'https://github.com/ReactRay/Chatify',
+      demo: 'https://chatify-na41.onrender.com',
+      video: "chatify.mkv",
+      imgArr: ['https://res.cloudinary.com/danlxus36/image/upload/v1744712597/chatify_c0lu2l.png',
+        'https://res.cloudinary.com/danlxus36/image/upload/v1744712597/chatify3_dcyp2r.png'
+        , 'https://res.cloudinary.com/danlxus36/image/upload/v1744712597/chatify4_bsfppn.png']
+    },
+    {
       id: '/talkyWocky',
       name: "TalkyWocky",
       description: "A chat app with responsive layout and a wide array of themes to choose from , providing quick live chat supporting text and image transfer.",
-      technologies: ["React", "Express", "MongoDB"],
+      technologies: ["React", "Express", "Sockets io", "MongoDB", "Mongoose"],
       img: "/chatty2.png",
       github: 'https://github.com/ReactRay/chatty',
       demo: 'https://chatty-8q6m.onrender.com',
@@ -80,9 +93,10 @@ function App() {
 
           <Route path='/' element={<Home projects={projects} />} />
           <Route path='/someday' element={<ProjectDetails project={projects[0]} />} />
-          <Route path='/talkyWocky' element={<ProjectDetails project={projects[1]} />} />
-          <Route path='/missBugs' element={<ProjectDetails project={projects[2]} />} />
-          <Route path='/todos' element={<ProjectDetails project={projects[3]} />} />
+          <Route path='/chatify' element={<ProjectDetails project={projects[1]} />} />
+          <Route path='/talkyWocky' element={<ProjectDetails project={projects[2]} />} />
+          <Route path='/missBugs' element={<ProjectDetails project={projects[3]} />} />
+          <Route path='/todos' element={<ProjectDetails project={projects[4]} />} />
         </Routes>
       </Router>
       <UserMsg />

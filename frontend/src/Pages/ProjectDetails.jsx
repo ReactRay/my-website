@@ -21,7 +21,11 @@ export function ProjectDetails({ project }) {
                     <img src={project.imgArr[2]} alt="img3" onClick={() => setPreviewImg(project.imgArr[2])} />
                 </div>
                 <div className="Video">
-                    <ProjectVideo video={project.videoId} />
+                    {project.videoId && <ProjectVideo video={project.videoId} />}
+                    {project.video && <video controls width={'100%'}>
+                        <source src="/chatify.mkv" type="video/mkv" />
+                        Your browser does not support the video tag.
+                    </video>}
                 </div>
                 <div className="details">
                     <h3>{project.name}</h3>
