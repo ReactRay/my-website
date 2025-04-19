@@ -16,6 +16,7 @@ export function Hero() {
 
     return (
         <div className="first-section">
+
             <div className="home-container">
                 <div className="animated-text" data-aos="fade-down">
                     <h1>hello ,im Radwan <hr /> <Typewriter {...props} /></h1>
