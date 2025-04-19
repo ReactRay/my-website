@@ -1,9 +1,9 @@
 export const prj = [
   {
-    id: '/planmate',
+    id: '/planmate (Ai task manager)',
     name: 'PlanMate',
     description:
-      'A productivity planner that allows users to manage their day by organizing tasks into Morning, Afternoon, and Night. It features drag-and-drop, plan reset, and task group switching.',
+      'Ai powered  productivity planner that allows users to manage their day by organizing tasks . It features drag-and-drop, plan reset, and task group switching.',
     technologies: [
       'React',
       'Zustand',
