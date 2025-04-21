@@ -1,6 +1,6 @@
 export const prj = [
   {
-    id: '/planmate (Ai task manager)',
+    id: '/planmate',
     name: 'PlanMate',
     description:
       'Ai powered  productivity planner that allows users to manage their day by organizing tasks . It features drag-and-drop, plan reset, and task group switching.',
