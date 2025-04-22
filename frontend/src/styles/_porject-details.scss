@@ -1,9 +1,8 @@
 .project-details {
-  min-height: 100dvh;
+  min-height: 90dvh;
   display: flex;
   background: linear-gradient(to right, #1e1e1e, #2c2c2c); /* Subtle gradient */
   color: #f0f0f0;
-  font-family: 'Poppins', sans-serif;
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -22,6 +21,7 @@
     margin-bottom: 1rem;
     color: #d6d8d7;
     font-weight: 400;
+    letter-spacing: 0.2rem;
   }
 
   p {
