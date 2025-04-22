@@ -151,78 +151,28 @@
   }
 }
 
-/* Default (Desktop-first) */
-
-/* Tablet */
-@media (max-width: 1024px) {
-  .right-side .image-container {
-    padding: 2rem;
-
-    img {
-      max-width: 20rem; // Reduce image size on tablet
-    }
-
-    .img2 {
-      left: 15rem; // Adjust positions
-    }
-
-    .img3 {
-      left: 8rem;
-      top: 15rem;
-    }
-  }
-}
-
-/* Large Phones */
-@media (max-width: 768px) {
+@media (max-width: 1080px) {
   .project-details {
+    padding: 0.5rem;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
-  .left-side {
-    padding: 1.5rem;
-  }
-
-  .right-side .image-container {
-    padding: 1.5rem;
-
-    img {
-      max-width: 24rem;
-    }
-
-    .img2 {
-      left: 4rem;
-      top: -2rem;
-    }
-
-    .img3 {
-      left: 5rem;
-      top: 18rem;
-    }
+  .right-side {
+    display: none;
   }
 }
 
 /* Small Phones */
 @media (max-width: 480px) {
-  .left-side h2 {
-    font-size: 2rem;
-  }
-
-  .left-side p {
-    font-size: 1rem;
-  }
-
-  .right-side .image-container {
-    display: flex;
-    flex-direction: column;
+  .project-details {
+    padding: 0.5rem;
+    justify-content: center;
     align-items: center;
-    padding: 1rem;
-    gap: 1rem;
+  }
 
-    img {
-      position: static !important;
-      max-width: 100%;
-      transform: none !important;
-    }
+  .right-side {
+    display: none;
   }
 }

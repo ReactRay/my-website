@@ -83,7 +83,11 @@ $light: 4px 4px 20px #fff;
     justify-content: center;
     align-items: center;
   }
-  span {
-    font-size: 2rem;
+  .animated-text {
+    padding: 2rem 1rem;
+
+    span {
+      font-size: 2rem;
+    }
   }
 }
