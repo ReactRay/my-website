@@ -39,9 +39,35 @@ a {
   margin: 0 auto;
 }
 
+@media (max-width: 900px) {
+  .main-container {
+    width: 95%;
+    padding: 0;
+  }
+
+  .particles {
+    display: none;
+  }
+}
+
 @media (max-width: 768px) {
   .main-container {
     width: 95%;
     padding: 0;
+  }
+
+  .particles {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-container {
+    width: 95%;
+    padding: 0;
+  }
+
+  .particles {
+    display: none;
   }
 }
