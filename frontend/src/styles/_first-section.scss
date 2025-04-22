@@ -19,21 +19,23 @@ $light: 4px 4px 20px #fff;
   flex-direction: column;
   justify-content: center;
   gap: 1rem;
+  border-radius: 5px;
   text-align: center;
-  background-color: rgba($color: #fff, $alpha: 0.2);
   backdrop-filter: blur(3px);
-  padding: 2em 7rem;
-  box-shadow: 4px 4px 20px #5e5c5c;
+  padding: 2em 4rem;
 
   h1 {
-    font-size: 4rem;
+    font-size: 3.8rem;
     font-weight: 300;
     text-shadow: $light;
+    line-height: 1.4;
+    letter-spacing: 0.4rem;
   }
 
   h3 {
-    font-weight: 300;
+    font-weight: 400;
     text-shadow: $light;
+    letter-spacing: 0.3rem;
   }
 
   span {
@@ -63,6 +65,10 @@ $light: 4px 4px 20px #fff;
 @media (max-width: 768px) {
   .animated-text {
     padding: 2rem 1rem;
+
+    span {
+      font-size: 3.2rem;
+    }
   }
   .home-container {
     flex-direction: column;

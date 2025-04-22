@@ -5,21 +5,17 @@ import { ProjectVideo } from "../cmps/ProjectVideo";
 export function ProjectDetails({ project }) {
     const [previewImg, setPreviewImg] = useState(null);
 
-    return (
-        <div className="project-details">
-            <h2>{project.name}</h2>
-            <Link to="/">go back</Link>
 
-            <div className="container-details">
-                <div className="img1">
-                    <img src={project.imgArr[0]} alt="img1" onClick={() => setPreviewImg(project.imgArr[0])} />
-                </div>
-                <div className="img2">
-                    <img src={project.imgArr[1]} alt="img2" onClick={() => setPreviewImg(project.imgArr[1])} />
-                </div>
-                <div className="img3">
-                    <img src={project.imgArr[2]} alt="img3" onClick={() => setPreviewImg(project.imgArr[2])} />
-                </div>
+    return (
+
+
+
+        <div className="project-details">
+            <div className="left-side">
+                <h2>{project.name}</h2>
+
+                <p>{project.description}</p>
+
                 <div className="Video">
                     {project.videoId && <ProjectVideo video={project.videoId} />}
                     {project.video && (
@@ -30,9 +26,24 @@ export function ProjectDetails({ project }) {
                     )}
 
                 </div>
-                <div className="details">
-                    <h3>{project.name}</h3>
-                    <p>{project.description}</p>
+
+                <Link className="btn" to={'/'}>Back</Link>
+            </div>
+
+            <div className="right-side">
+
+                <div className="image-container">
+
+
+                    <div className="img1">
+                        <img src={project.imgArr[0]} alt="img1" onClick={() => setPreviewImg(project.imgArr[0])} />
+                    </div>
+                    <div className="img2">
+                        <img src={project.imgArr[1]} alt="img2" onClick={() => setPreviewImg(project.imgArr[1])} />
+                    </div>
+                    <div className="img3">
+                        <img src={project.imgArr[2]} alt="img3" onClick={() => setPreviewImg(project.imgArr[2])} />
+                    </div>
                 </div>
             </div>
 
@@ -42,5 +53,49 @@ export function ProjectDetails({ project }) {
                 </div>
             )}
         </div>
-    );
+    )
+
 }
+
+
+
+
+
+// export function ProjectDetails({ project }) {
+//     const [previewImg, setPreviewImg] = useState(null);
+
+//     return (
+//         <div className="project-details">
+//             <h2>{project.name}</h2>
+//             <Link to="/">go back</Link>
+
+//             <div className="container-details">
+//                 <div className="img1">
+//                     <img src={project.imgArr[0]} alt="img1" onClick={() => setPreviewImg(project.imgArr[0])} />
+//                 </div>
+//                 <div className="img2">
+//                     <img src={project.imgArr[1]} alt="img2" onClick={() => setPreviewImg(project.imgArr[1])} />
+//                 </div>
+//                 <div className="img3">
+//                     <img src={project.imgArr[2]} alt="img3" onClick={() => setPreviewImg(project.imgArr[2])} />
+//                 </div>
+//                 <div className="Video">
+//                     {project.videoId && <ProjectVideo video={project.videoId} />}
+//                     {project.video && (
+//                         <video controls width="100%">
+//                             <source src={project.video} type="video/mp4" />
+//                             Your browser does not support the video tag.
+//                         </video>
+//                     )}
+
+//                 </div>
+//                 <div className="details">
+//                     <h3>{project.name}</h3>
+//                     <p>{project.description}</p>
+//                 </div>
+//             </div>
+
+
+//         </div>
+//     );
+// }

@@ -53,16 +53,13 @@
 }
 
 .comment-container {
-  background-color: rgba($color: #fff, $alpha: 0.2);
   margin-top: 1rem;
-  padding: 1rem 2rem;
   border-radius: 4px;
   overflow-y: auto;
   max-height: 400px;
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  box-shadow: 4px 4px 20px #5e5c5c;
 }
 
 .comment-container::-webkit-scrollbar {

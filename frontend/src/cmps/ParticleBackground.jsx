@@ -7,6 +7,8 @@ const ParticleBackground = ({ color }) => {
         await loadSlim(engine);
     };
 
+    const isMobile = window.innerWidth <= 768; // Simple mobile check
+
     return (
         <div className="particles">
             <Particles
@@ -21,24 +23,30 @@ const ParticleBackground = ({ color }) => {
                     height: "100vh",
                 }}
                 options={{
-
                     fullScreen: { enable: false },
-                    background: { color: { value: `${color}` } },
+                    background: { color: { value: color } },
+                    fpsLimit: 40, // Limit FPS for smoother performance
                     interactivity: {
                         events: {
-                            onHover: { enable: true, mode: "repulse" },
+                            onHover: { enable: !isMobile, mode: "repulse" }, // Disable hover on mobile
                             onClick: { enable: true, mode: "push" },
                         },
                         modes: {
-                            repulse: { distance: 100 },
-                            push: { quantity: 4 },
+                            repulse: { distance: isMobile ? 50 : 100 },
+                            push: { quantity: isMobile ? 2 : 4 },
                         },
                     },
                     particles: {
-                        number: { value: 70 },
+                        number: { value: isMobile ? 30 : 70 }, // Fewer particles on mobile
                         color: { value: "#fff" },
-                        links: { enable: true, distance: 150, color: "#fff", opacity: 0.5 },
+                        links: {
+                            enable: !isMobile, // Disable links on mobile
+                            distance: 150,
+                            color: "#fff",
+                            opacity: 0.5
+                        },
                         move: { enable: true, speed: 1.5 },
+                        size: { value: 2, random: true }, // Small particle sizes
                     },
                     move: {
                         enable: true,
@@ -48,12 +56,9 @@ const ParticleBackground = ({ color }) => {
                         random: true,
                         straight: false,
                     },
-
-
                 }}
             />
         </div>
-
     );
 };
 
