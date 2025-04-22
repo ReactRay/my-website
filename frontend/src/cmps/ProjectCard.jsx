@@ -1,19 +1,17 @@
 
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 
 export function ProjectCard({ project }) {
 
 
+    const navigate = useNavigate()
 
 
     return (
         <div className="project-card-container blur">
-            <div className="project-card">
+            <div className="project-card" onClick={() => { navigate(`${project.id}`) }}>
                 <img src={project.img} alt="background" className="bg-image" />
-                <div className="overlay-content">
-                    <a href={project.demo} target="_blank" rel="noopener noreferrer">Demo</a>
-                    <a href={project.github} target="_blank" rel="noopener noreferrer">Github</a>
-                </div>
+
             </div>
 
             <div className="project-text">

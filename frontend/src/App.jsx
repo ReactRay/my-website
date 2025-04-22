@@ -24,7 +24,7 @@ function App() {
 
   return (
     <div style={{ position: 'relative' }}>
-      <ParticleBackground color={'#333'} />
+      <ParticleBackground color={'#1e1e1e'} />
 
       <Router>
         <Routes>
