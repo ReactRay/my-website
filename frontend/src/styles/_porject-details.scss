@@ -3,6 +3,7 @@
   display: flex;
   background: linear-gradient(to right top, #17171f, #132121);
   color: #f0f0f0;
+  padding: 3rem;
 
   @media (max-width: 768px) {
     flex-direction: column;
