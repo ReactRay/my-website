@@ -81,7 +81,7 @@ $light: 4px 4px 20px #fff;
     }
   }
   .home-container {
-    flex-direction: column;
+    flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
   }
@@ -89,7 +89,7 @@ $light: 4px 4px 20px #fff;
 
 @media (max-width: 500px) {
   .home-container {
-    flex-direction: column;
+    flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
   }

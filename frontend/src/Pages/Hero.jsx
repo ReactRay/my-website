@@ -28,9 +28,9 @@ export function Hero() {
                         <Link onClick={() => showSuccessMsg('Welcome to Projects')} to="projects">Projects</Link>
                     </div>
                 </div>
-                <div>
+                {/* <div>
                     <ProfileImage />
-                </div>
+                </div> */}
 
             </div>
         </div>
