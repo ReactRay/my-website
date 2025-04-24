@@ -11,7 +11,7 @@
 
 .left-side {
   flex: 1;
-  padding: 3rem;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -41,14 +41,16 @@
   }
 
   .btn {
-    background-color: rgba($color: #000000, $alpha: 0.3);
-    color: #fff;
-    font-weight: 00;
+    background-color: rgba($color: #ffffff, $alpha: 0.05);
+    border: 1px solid transparent;
+    padding: 0.5rem 1rem;
+    transition: all 0.5s ease-in-out;
+    width: 100%;
     text-align: center;
-    padding: 0.8rem 2rem;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s;
+
+    &:hover {
+      border: 1px solid #fff;
+    }
 
     &:hover {
       background-color: #9d9d9d;
@@ -58,8 +60,10 @@
 
 .right-side {
   flex: 1;
+  padding: 1rem;
   position: relative;
-  padding: 2rem;
+  width: 100%;
+  height: 100%;
 
   .image-container {
     position: relative;
@@ -110,9 +114,11 @@
       flex-wrap: wrap;
       gap: 1rem;
 
-      img {
+      img,
+      .img1,
+      .img2,
+      .img3 {
         position: static !important;
-        max-width: 25rem;
       }
     }
   }
@@ -159,9 +165,9 @@
     align-items: center;
   }
 
-  .right-side {
-    display: none;
-  }
+  // .right-side {
+  //   display: none;
+  // }
 }
 
 /* Small Phones */
@@ -172,7 +178,7 @@
     align-items: center;
   }
 
-  .right-side {
-    display: none;
-  }
+  // .right-side {
+  //   display: none;
+  // }
 }

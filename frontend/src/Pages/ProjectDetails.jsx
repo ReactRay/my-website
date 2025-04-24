@@ -27,7 +27,6 @@ export function ProjectDetails({ project }) {
 
                 </div>
 
-                <Link className="btn" to={'/'}>Back</Link>
             </div>
 
             <div className="right-side">
@@ -45,6 +44,7 @@ export function ProjectDetails({ project }) {
                         <img src={project.imgArr[2]} alt="img3" onClick={() => setPreviewImg(project.imgArr[2])} />
                     </div>
                 </div>
+
             </div>
 
             {previewImg && (
@@ -52,6 +52,7 @@ export function ProjectDetails({ project }) {
                     <img src={previewImg} alt="Preview" />
                 </div>
             )}
+
         </div>
     )
 

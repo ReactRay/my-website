@@ -78,10 +78,10 @@ export function Comments() {
                 <div>
 
 
-                    <input value={messege.user} type="text" placeholder="your name" onChange={(e) => setMessege((prev) => ({ ...prev, user: e.target.value }))} />
+                    <input value={messege.user} type="text" placeholder="your name" onChange={(e) => setMessege((prev) => ({ ...prev, user: e.target.value }))} required />
                 </div>
                 <div>
-                    <input value={messege.text} type="text" placeholder="say something nice" onChange={(e) => setMessege((prev) => ({ ...prev, text: e.target.value }))} />
+                    <input value={messege.text} type="text" placeholder="say something nice" onChange={(e) => setMessege((prev) => ({ ...prev, text: e.target.value }))} required />
                 </div>
                 <div><img onClick={handleClick} className="img-picker-btn" src={messege.img} alt="img" width={'50px'} height={'50px'} /></div>
                 <div>

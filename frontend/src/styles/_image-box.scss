@@ -1,24 +1,25 @@
 .image-box {
-  background-color: #fff;
-  padding: 2rem 1rem;
-  text-align: center;
-  line-height: 1.5;
-  transform: scale(0.8);
-
-  color: #333;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  box-shadow: 4px 4px 40px #e5e3e3;
-
-  h2 {
-    font-weight: 400;
-  }
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  animation: imgshow 0.7s;
+  box-shadow: 0 0.5rem 30rem #ffffff7a;
+  animation: imgshow 1.7s forwards;
 }
 .my-image {
-  width: 17em;
-  height: 12em;
-  border: 1px solid #eaeaea;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 3px solid #fff;
+}
+
+@keyframes imgshow {
+  0% {
+    opacity: 0;
+    transform: translateX(300px) scale(1.6);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
 }

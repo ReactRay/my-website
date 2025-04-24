@@ -1,4 +1,4 @@
-import myImage from '../assets/me.jpg'
+import myImage from '../assets/me2.jpg'
 
 
 
@@ -9,7 +9,6 @@ export function ProfileImage() {
     return (
         <div className="image-box">
 
-            <h2>memories never fade</h2>
 
             <img className='my-image' src={myImage} alt="me" />
 

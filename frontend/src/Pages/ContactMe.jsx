@@ -50,7 +50,7 @@ export function ContactMe() {
                 </div>
 
                 <div>
-                    <button className='contact-btn'>message me</button>
+                    <button className='contact-btn'>Submit</button>
                 </div>
 
             </form>
