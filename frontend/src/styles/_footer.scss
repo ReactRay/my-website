@@ -22,6 +22,7 @@ footer {
   }
 
   a {
+    transition: all 0.8s;
     &:hover {
       transform: scale(1.1);
       opacity: 0.6;
