@@ -75,12 +75,12 @@ export function Comments() {
         <Element name="comments" className="comment-section">
             <h2>say something nice </h2>
             <form className="comment-form" onSubmit={handleSubmit}>
-                <div>
+                <div className="form-group">
 
 
                     <input value={messege.user} type="text" placeholder="your name" onChange={(e) => setMessege((prev) => ({ ...prev, user: e.target.value }))} required />
                 </div>
-                <div>
+                <div className="form-group">
                     <input value={messege.text} type="text" placeholder="say something nice" onChange={(e) => setMessege((prev) => ({ ...prev, text: e.target.value }))} required />
                 </div>
                 <div><img onClick={handleClick} className="img-picker-btn" src={messege.img} alt="img" width={'50px'} height={'50px'} /></div>
