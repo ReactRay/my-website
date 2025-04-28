@@ -10,7 +10,7 @@ const ParticleBackground = ({ color }) => {
     const isMobile = window.innerWidth <= 768; // Simple mobile check
 
     return (
-        <div className="particles">
+        <div >
             <Particles
                 id="tsparticles"
                 init={particlesInit}
