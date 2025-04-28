@@ -24,18 +24,19 @@ function App() {
 
   return (
     <div style={{ position: 'relative' }}>
-      <ParticleBackground color={'#1e1e1e'} />
+      <ParticleBackground color={''} />
 
       <Router>
         <Routes>
 
           <Route path='/' element={<Home projects={projects} />} />
-          <Route path='/planmate' element={<ProjectDetails project={projects[0]} />} />
-          <Route path='/someday' element={<ProjectDetails project={projects[1]} />} />
-          <Route path='/chatify' element={<ProjectDetails project={projects[2]} />} />
-          <Route path='/talkyWocky' element={<ProjectDetails project={projects[3]} />} />
-          <Route path='/missBugs' element={<ProjectDetails project={projects[4]} />} />
-          <Route path='/todos' element={<ProjectDetails project={projects[5]} />} />
+          <Route path='/quizzy' element={<ProjectDetails project={projects[0]} />} />
+          <Route path='/planmate' element={<ProjectDetails project={projects[1]} />} />
+          <Route path='/someday' element={<ProjectDetails project={projects[2]} />} />
+          <Route path='/chatify' element={<ProjectDetails project={projects[3]} />} />
+          <Route path='/talkyWocky' element={<ProjectDetails project={projects[4]} />} />
+          <Route path='/missBugs' element={<ProjectDetails project={projects[5]} />} />
+          <Route path='/todos' element={<ProjectDetails project={projects[6]} />} />
         </Routes>
       </Router>
       <UserMsg />

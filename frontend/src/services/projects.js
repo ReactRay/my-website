@@ -1,5 +1,22 @@
 export const prj = [
   {
+    id: '/quizzy',
+    name: 'Quizzy',
+    description:
+      'An AI-powered quiz generator that creates custom quizzes based on your chosen topic. Designed to make learning interactive and fun!',
+    technologies: ['React', 'Express', 'Mongoose', 'JWT', 'Zustand'],
+    img: 'https://res.cloudinary.com/danlxus36/image/upload/v1745828860/quizzy1_hqhwxy.png',
+    github: 'https://github.com/ReactRay/quizy',
+    demo: 'https://quizy-72mq.onrender.com',
+    video:
+      'https://res.cloudinary.com/danlxus36/video/upload/v1745833036/2025-04-28_12-04-06_aokbdp.mp4',
+    imgArr: [
+      'https://res.cloudinary.com/danlxus36/image/upload/v1745828860/quizzy1_hqhwxy.png',
+      'https://res.cloudinary.com/danlxus36/image/upload/v1745828860/quizzy2_ogzzff.png',
+      'https://res.cloudinary.com/danlxus36/image/upload/v1745828860/quizzy4_ir1vnk.png',
+    ],
+  },
+  {
     id: '/planmate',
     name: 'PlanMate',
     description:
