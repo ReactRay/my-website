@@ -5,6 +5,7 @@ import { ImagePicker } from "../cmps/ImagePicker.jsx"
 import { Popover } from "@mui/material"
 import { Element } from "react-scroll"
 import { showSuccessMsg } from "../services/event-bus.service.js"
+import { SendHorizontal } from 'lucide-react'
 
 export function Comments() {
 
@@ -85,7 +86,9 @@ export function Comments() {
                 </div>
                 <div><img onClick={handleClick} className="img-picker-btn" src={messege.img} alt="img" width={'50px'} height={'50px'} /></div>
                 <div>
-                    <button>Submit</button>
+                    <button type="submit">
+                        <SendHorizontal className="icon" /> Submit
+                    </button>
                 </div>
             </form>
 

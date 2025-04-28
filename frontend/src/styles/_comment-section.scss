@@ -101,6 +101,31 @@
   }
 }
 
+button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  .icon {
+    width: 18px;
+    height: 18px;
+    color: #d6bb8a;
+    transition: all 0.4s;
+  }
+
+  &:hover {
+    .icon {
+      color: #456383;
+    }
+  }
+}
+
 .comment-text-container {
   display: flex;
   flex-direction: column;

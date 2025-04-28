@@ -2,6 +2,7 @@ import { Element } from 'react-scroll';
 import { useState } from 'react';
 import { emailMe } from '../services/comment.actions';
 import { showErrorMsg, showSuccessMsg } from '../services/event-bus.service';
+import { SendHorizontal } from 'lucide-react'
 
 
 export function ContactMe() {
@@ -50,7 +51,11 @@ export function ContactMe() {
                 </div>
 
                 <div>
-                    <button className='contact-btn'>Submit</button>
+
+                    <button type="submit" className='contact-btn'>
+                        <SendHorizontal className="icon" /> Submit
+                    </button>
+
                 </div>
 
             </form>

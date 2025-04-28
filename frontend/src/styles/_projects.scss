@@ -170,3 +170,21 @@
     }
   }
 }
+
+.project-links-mobile a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  &:hover {
+    .icon {
+      color: #558c87;
+    }
+  }
+  .icon {
+    width: 1.2rem;
+    height: 1.2rem;
+    color: #d6bb8a;
+    transition: color 0.4s;
+  }
+}
