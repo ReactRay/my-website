@@ -18,8 +18,8 @@ export function UserMsg() {
 
       timeoutIdRef.current = setTimeout(() => {
         setIsFadingOut(true);
-        setTimeout(closeMsg, 2000);
-      }, 4000);
+        setTimeout(closeMsg, 1500);
+      }, 1600);
     });
 
     return unsubscribe;
@@ -36,7 +36,6 @@ export function UserMsg() {
     <section
       className={`user-msg ${msg.type} ${isFadingOut ? 'fade-out' : ''}`}
     >
-      <button onClick={closeMsg}>x</button>
       {msg.txt}
     </section>
   );

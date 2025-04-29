@@ -33,14 +33,14 @@
 }
 
 .success {
-  background-color: rgba($color: #333, $alpha: 0.5);
+  background-color: rgba($color: #518898, $alpha: 0.1);
   color: #fff;
   border: 1px solid #fff;
   box-shadow: 4px 4px 20px rgba($color: #fff, $alpha: 0.3);
 }
 
 .error {
-  background-color: coral;
+  background-color: rgba($color: rgb(203, 78, 66), $alpha: 0.5);
   color: #fff;
 }
 
