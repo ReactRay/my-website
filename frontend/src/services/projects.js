@@ -1,5 +1,23 @@
 export const prj = [
   {
+    id: '/layale',
+    name: 'Demascus Nights',
+    description:
+      'A beautiful and responsive website for my family’s Middle Eastern restaurant. Features a welcoming introduction, full menu, image gallery, and a direct Waze link for easy navigation.',
+    technologies: ['HTML', 'CSS'],
+    img: 'https://res.cloudinary.com/danlxus36/image/upload/v1747403723/l1_e0mh5b.png',
+    github: 'https://github.com/ReactRay/Layale',
+    demo: 'https://layale.vercel.app/', //
+    video:
+      'https://res.cloudinary.com/danlxus36/video/upload/v1747403638/2025-05-16_16-52-20_jgiuy9.mp4',
+    imgArr: [
+      'https://res.cloudinary.com/danlxus36/image/upload/v1747403723/l1_e0mh5b.png',
+      'https://res.cloudinary.com/danlxus36/image/upload/v1747403724/l2_mwhz9u.png',
+      'https://res.cloudinary.com/danlxus36/image/upload/v1747403724/l3_vdi7ek.png',
+    ],
+  },
+
+  {
     id: '/quizzy',
     name: 'Quizzy',
     description:

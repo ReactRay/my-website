@@ -60,6 +60,8 @@ $light: 4px 4px 20px #fff;
   columns: #fff;
 
   a {
+    text-shadow: $light;
+
     background-color: rgba($color: #ffffff, $alpha: 0.05);
     border: 1px solid transparent;
     padding: 0.5rem 1rem;
@@ -80,7 +82,7 @@ $light: 4px 4px 20px #fff;
       border: 1px solid #fff;
 
       .icon {
-        color: #558c87;
+        color: #ffffff;
       }
     }
   }

@@ -18,25 +18,28 @@ function App() {
     AOS.init({ duration: 2000, once: true });
   }, []);
 
+  const isMobile = window.innerWidth <= 768; // Simple mobile check
+
 
   const projects = prj
 
 
   return (
     <div style={{ position: 'relative' }}>
-      <ParticleBackground color={''} />
+      {!isMobile && <ParticleBackground />}
 
       <Router>
         <Routes>
 
           <Route path='/' element={<Home projects={projects} />} />
-          <Route path='/quizzy' element={<ProjectDetails project={projects[0]} />} />
-          <Route path='/planmate' element={<ProjectDetails project={projects[1]} />} />
-          <Route path='/someday' element={<ProjectDetails project={projects[2]} />} />
-          <Route path='/chatify' element={<ProjectDetails project={projects[3]} />} />
-          <Route path='/talkyWocky' element={<ProjectDetails project={projects[4]} />} />
-          <Route path='/missBugs' element={<ProjectDetails project={projects[5]} />} />
-          <Route path='/todos' element={<ProjectDetails project={projects[6]} />} />
+          <Route path='/layale' element={<ProjectDetails project={projects[0]} />} />
+          <Route path='/quizzy' element={<ProjectDetails project={projects[1]} />} />
+          <Route path='/planmate' element={<ProjectDetails project={projects[2]} />} />
+          <Route path='/someday' element={<ProjectDetails project={projects[3]} />} />
+          <Route path='/chatify' element={<ProjectDetails project={projects[4]} />} />
+          <Route path='/talkyWocky' element={<ProjectDetails project={projects[5]} />} />
+          <Route path='/missBugs' element={<ProjectDetails project={projects[6]} />} />
+          <Route path='/todos' element={<ProjectDetails project={projects[7]} />} />
         </Routes>
       </Router>
       <UserMsg />

@@ -118,15 +118,19 @@
 
 @keyframes apear {
   0% {
-    filter: blur(10px);
+    transform: scale(0.8);
   }
   45%,
   55% {
-    filter: blur(0px);
-    transform: scale(1.05);
+    transform: scale(1);
   }
   100% {
-    filter: blur(20px);
+    transform: scale(0.8);
+  }
+}
+.projects-section {
+  h2 {
+    font-size: 4.5rem;
   }
 }
 

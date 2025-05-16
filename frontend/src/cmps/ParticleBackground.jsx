@@ -18,6 +18,7 @@ const ParticleBackground = ({ color }) => {
                     position: "absolute",
                     top: 0,
                     left: 0,
+                    bottom: 0,
                     zIndex: -1,
                     width: "100vw",
                     height: "100vh",
@@ -25,28 +26,28 @@ const ParticleBackground = ({ color }) => {
                 options={{
                     fullScreen: { enable: false },
                     background: { color: { value: color } },
-                    fpsLimit: 40, // Limit FPS for smoother performance
+                    fpsLimit: 40,
                     interactivity: {
                         events: {
                             onHover: { enable: !isMobile, mode: "repulse" }, // Disable hover on mobile
-                            onClick: { enable: true, mode: "push" },
+                            onClick: { enable: false, mode: "push" },
                         },
                         modes: {
-                            repulse: { distance: isMobile ? 50 : 100 },
-                            push: { quantity: isMobile ? 2 : 4 },
+                            repulse: { distance: 100 },
+                            push: { quantity: 4 },
                         },
                     },
                     particles: {
-                        number: { value: isMobile ? 30 : 70 }, // Fewer particles on mobile
+                        number: { value: isMobile ? 20 : 100 },
                         color: { value: "#fff" },
                         links: {
-                            enable: !isMobile, // Disable links on mobile
-                            distance: 150,
+                            enable: true,
+                            distance: isMobile ? 70 : 150,
                             color: "#fff",
                             opacity: 0.5
                         },
                         move: { enable: true, speed: 1.5 },
-                        size: { value: 2, random: true }, // Small particle sizes
+                        size: { value: isMobile ? 1 : 2, random: true },
                     },
                     move: {
                         enable: true,

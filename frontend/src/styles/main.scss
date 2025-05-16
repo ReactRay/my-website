@@ -22,9 +22,40 @@ html {
 }
 
 body {
-  background: linear-gradient(to left bottom, #384b6b, #361f29);
-  color: #fff;
+  background: linear-gradient(
+    -45deg,
+    #439eb4,
+    #824c5d,
+    #426f82,
+    #368787,
+    #3c617e,
+    #a6253f
+  );
+  background-size: 300% 200%;
+  animation: galaxyFlow 19s ease infinite;
+  color: #ffffff;
   font-family: 'Quicksand', sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+@keyframes galaxyFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 50% 100%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  75% {
+    background-position: 50% 0%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 a {
@@ -44,10 +75,6 @@ a {
     width: 85%;
     padding: 0;
   }
-
-  .particles {
-    display: none;
-  }
 }
 
 @media (max-width: 768px) {
@@ -55,19 +82,11 @@ a {
     width: 85%;
     padding: 0;
   }
-
-  .particles {
-    display: none;
-  }
 }
 
 @media (max-width: 480px) {
   .main-container {
     width: 85%;
     padding: 0;
-  }
-
-  .particles {
-    display: none;
   }
 }

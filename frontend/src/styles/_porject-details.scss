@@ -1,8 +1,7 @@
 .project-details {
-  min-height: 100dvh;
   display: flex;
-  background: linear-gradient(to left bottom, #384b6b, #361f29);
-  color: #f0f0f0;
+  min-height: 100dvh;
+  color: #fff;
   padding: 3rem;
 
   @media (max-width: 768px) {
@@ -63,13 +62,11 @@
 
   .image-container {
     position: relative;
-    height: 100%;
-    width: 100%;
     /* Subtle gradient */
 
     img {
       position: relative;
-      width: 28rem;
+      width: 30rem;
       height: auto;
       border-radius: 8px;
       object-fit: cover;
@@ -86,19 +83,19 @@
 
     .img1 {
       position: absolute;
-      top: 10rem;
+      top: 4rem;
       left: 0;
     }
 
     .img2 {
       position: absolute;
-      top: 5rem;
+      top: 3rem;
       left: 15rem;
     }
 
     .img3 {
       position: absolute;
-      top: 18rem;
+      top: 10rem;
       left: 8rem;
     }
   }
