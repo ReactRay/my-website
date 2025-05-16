@@ -20,15 +20,14 @@
 body {
   background: linear-gradient(
     -45deg,
-    #439eb4,
-    #824c5d,
-    #426f82,
-    #368787,
-    #3c617e,
-    #a6253f
+    #000000,
+    #0d2747,
+    #146565,
+    #012947,
+    #12a8a0
   );
-  background-size: 300% 200%;
-  animation: galaxyFlow 19s ease infinite;
+  background-size: 200%;
+
   color: #ffffff;
   font-family: 'Quicksand', sans-serif;
   margin: 0;
@@ -45,12 +44,6 @@ body {
   }
   50% {
     background-position: 100% 50%;
-  }
-  75% {
-    background-position: 50% 0%;
-  }
-  100% {
-    background-position: 0% 50%;
   }
 }
 
