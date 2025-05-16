@@ -20,7 +20,6 @@ export function Home({ projects }) {
             <Nav />
             <Hero />
             <Projects projects={projects} />
-            <Comments />
             <ContactMe />
             <Footer />
         </div>
