@@ -32,14 +32,15 @@ function App() {
         <Routes>
 
           <Route path='/' element={<Home projects={projects} isMobile={isMobile} />} />
-          <Route path='/layale' element={<ProjectDetails project={projects[0]} />} />
-          <Route path='/quizzy' element={<ProjectDetails project={projects[1]} />} />
-          <Route path='/planmate' element={<ProjectDetails project={projects[2]} />} />
-          <Route path='/someday' element={<ProjectDetails project={projects[3]} />} />
-          <Route path='/chatify' element={<ProjectDetails project={projects[4]} />} />
-          <Route path='/talkyWocky' element={<ProjectDetails project={projects[5]} />} />
-          <Route path='/missBugs' element={<ProjectDetails project={projects[6]} />} />
-          <Route path='/todos' element={<ProjectDetails project={projects[7]} />} />
+          <Route path='/crafty' element={<ProjectDetails project={projects[0]} />} />
+          <Route path='/layale' element={<ProjectDetails project={projects[1]} />} />
+          <Route path='/quizzy' element={<ProjectDetails project={projects[2]} />} />
+          <Route path='/planmate' element={<ProjectDetails project={projects[3]} />} />
+          <Route path='/someday' element={<ProjectDetails project={projects[4]} />} />
+          <Route path='/chatify' element={<ProjectDetails project={projects[5]} />} />
+          <Route path='/talkyWocky' element={<ProjectDetails project={projects[6]} />} />
+          <Route path='/missBugs' element={<ProjectDetails project={projects[7]} />} />
+          <Route path='/todos' element={<ProjectDetails project={projects[8]} />} />
         </Routes>
       </Router>
       <UserMsg />

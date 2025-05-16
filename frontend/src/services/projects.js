@@ -1,5 +1,32 @@
 export const prj = [
   {
+    id: '/crafty',
+    name: 'Crafty',
+    description:
+      'A Fiverr-style freelance platform built for quick job posting and request handling. Users can post gigs, comment, submit requests, and pay using PayPal. Admins can accept or reject requests. The project was a freelance gig completed under tight deadlines for a student’s final project.',
+    technologies: [
+      'React',
+      'Express',
+      'MongoDB',
+      'Mongoose',
+      'Zustand',
+      'Cloudinary',
+      'PayPal API',
+    ],
+    img: 'https://res.cloudinary.com/danlxus36/image/upload/v1747322931/Screenshot_2_ayhroh.png',
+    github: 'https://github.com/ReactRay/ForAFriend',
+    demo: 'https://forafriend.vercel.app/',
+    video:
+      'https://res.cloudinary.com/danlxus36/video/upload/v1747420895/2025-05-15_18-46-57_dr0x61.mp4',
+    imgArr: [
+      'https://res.cloudinary.com/danlxus36/image/upload/v1747322931/Screenshot_2_ayhroh.png',
+      'https://res.cloudinary.com/danlxus36/image/upload/v1747322931/Screenshot_5_vinuju.png',
+
+      'https://res.cloudinary.com/danlxus36/image/upload/v1747322930/Screenshot_1_f0v9k7.png',
+    ],
+  },
+
+  {
     id: '/layale',
     name: 'Demascus Nights',
     description:
