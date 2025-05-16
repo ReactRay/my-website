@@ -31,7 +31,7 @@ function App() {
       <Router>
         <Routes>
 
-          <Route path='/' element={<Home projects={projects} />} />
+          <Route path='/' element={<Home projects={projects} isMobile={isMobile} />} />
           <Route path='/layale' element={<ProjectDetails project={projects[0]} />} />
           <Route path='/quizzy' element={<ProjectDetails project={projects[1]} />} />
           <Route path='/planmate' element={<ProjectDetails project={projects[2]} />} />

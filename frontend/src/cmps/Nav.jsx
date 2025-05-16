@@ -3,7 +3,7 @@ import { showSuccessMsg } from '../services/event-bus.service';
 
 
 
-export function Nav() {
+export function Nav({ isMobile }) {
 
 
 
@@ -17,10 +17,10 @@ export function Nav() {
                 <Link onClick={() => showSuccessMsg('Welcome to Projects.')} className='nav-link' to="projects" smooth={true} duration={500}>
                     Projects
                 </Link>
-                |
-                <Link onClick={() => showSuccessMsg('Say something nice.')} className='nav-link' to="comments" smooth={true} duration={500}>
+
+                {!isMobile && <>| <Link onClick={() => showSuccessMsg('Say something nice.')} className='nav-link' to="comments" smooth={true} duration={500}>
                     Surprise
-                </Link>
+                </Link></>}
                 |
                 <Link onClick={() => showSuccessMsg("Let's talk!")} className='nav-link' to="contact-me" smooth={true} duration={500}>
                     Contact me
