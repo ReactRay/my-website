@@ -30,8 +30,8 @@ export function Hero() {
                     <div className="link-box">
                         <a
                             onClick={() => { showSuccessMsg('Resume Downloaded!') }}
-                            href="/Radwan_Mansur_FullStack_CV.pdf"
-                            download="Radwan_Mansur_FullStack_CV.pdf"
+                            href="/RM_CV.pdf"
+                            download="RM_CV.pdf"
                         >
                             <FileText className="icon" /> Resume
                         </a>
