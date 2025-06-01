@@ -22,10 +22,10 @@ export function Hero() {
                 <div className="animated-text" data-aos="fade-down">
                     <div className="hero">
                         <h1>
-                            hello, I'm Radwan <hr />
+                            Hello, I'm Radwan <hr />
                             <Typewriter {...props} />
                         </h1>
-                        <h3>welcome to my website</h3>
+                        <h3 className="ocean">welcome to my ocean</h3>
                     </div>
                     <div className="link-box">
                         <a
