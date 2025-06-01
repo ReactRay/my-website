@@ -32,14 +32,14 @@ $light: 4px 4px 20px #fff;
     font-weight: 300;
     text-shadow: $light;
     line-height: 1.4;
-    letter-spacing: 1rem;
+    letter-spacing: 1.2rem;
+    text-transform: capitalize;
   }
 
   h3 {
-    font-size: clamp(0.5rem, 2.5vw, 1rem);
+    font-size: clamp(0.7rem, 2.5vw, 1rem);
     font-weight: 400;
     text-shadow: $light;
-    letter-spacing: 0.3rem;
   }
 
   span {
@@ -75,6 +75,8 @@ $light: 4px 4px 20px #fff;
     transition: all 0.5s ease-in-out;
     width: 100%;
     border-radius: 4px;
+    letter-spacing: 0.3rem;
+    text-transform: capitalize;
 
     .icon {
       transition: all 0.4s;
@@ -117,7 +119,7 @@ $light: 4px 4px 20px #fff;
     align-items: center;
 
     h1 {
-      letter-spacing: normal;
+      letter-spacing: 0.3rem;
     }
   }
   .animated-text {

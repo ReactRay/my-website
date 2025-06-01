@@ -87,7 +87,7 @@ export const prj = [
   },
   {
     id: '/someday',
-    name: 'Someday (Monday Clone)',
+    name: 'Someday ',
     description:
       'A task management app inspired by Monday.com. Features Kanban boards, draggable tasks, and group management.',
     technologies: ['React', 'Redux', 'Express', 'Sockets io', 'MongoDB'],
@@ -103,7 +103,7 @@ export const prj = [
   },
   {
     id: '/chatify',
-    name: 'Chatify (Spotify Clone + Chat)',
+    name: 'Chatify',
     description:
       'a real-time music streaming web app — a modern Spotify-style clone that allows users to listen to music, chat live, and see what others are playing. Admins can upload albums and tracks to be shared across all users. This app does not use Spotify or YouTube APIs — all music is hosted and managed directly.',
     technologies: [
