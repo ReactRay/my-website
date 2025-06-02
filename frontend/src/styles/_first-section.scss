@@ -1,3 +1,5 @@
+@import './variables';
+
 $light: 4px 4px 20px #fff;
 
 .first-section {
@@ -27,7 +29,13 @@ $light: 4px 4px 20px #fff;
 
   padding: 2em 4rem;
 
+  .welcome {
+    font-family: 'caveat', sans-serif;
+    font-size: clamp(5rem, 5vw, 9rem);
+  }
+
   h1 {
+    font-family: 'quicksand', sans-serif;
     font-size: clamp(3.5rem, 5vw, 5.8rem);
     font-weight: 300;
     text-shadow: $light;
@@ -80,7 +88,7 @@ $light: 4px 4px 20px #fff;
 
     .icon {
       transition: all 0.4s;
-      color: #d6bb8a;
+      color: #ffffff;
     }
 
     display: flex;
@@ -91,7 +99,9 @@ $light: 4px 4px 20px #fff;
       border: 1px solid #fff;
 
       .icon {
-        color: #ffffff;
+        color: #d6bb8a;
+
+        transform: scale(1.1);
       }
     }
   }

@@ -19,19 +19,20 @@ export function Hero() {
         <div className="first-section">
             <ParticleBackground color="" /> {/* Assuming you want particles */}
             <div className="home-container">
-                <div className="animated-text" data-aos="fade-down">
+                <div className="animated-text" >
                     <div className="hero">
-                        <h1>
+                        <h1 className="welcome fade-in-up">
                             Hello, I'm Radwan <hr />
-                            <Typewriter {...props} />
+                            <h1 className="fade-in-down"><Typewriter {...props} /> </h1>
                         </h1>
-                        <h3 className="ocean">welcome to my ocean</h3>
+                        <h3 className="ocean fade-in-down">welcome to my ocean</h3>
                     </div>
-                    <div className="link-box">
+                    <div className="link-box ">
                         <a
                             onClick={() => { showSuccessMsg('Resume Downloaded!') }}
                             href="/RM_CV.pdf"
                             download="RM_CV.pdf"
+                            className="fade-in-left"
                         >
                             <FileText className="icon" /> Resume
                         </a>
@@ -40,6 +41,7 @@ export function Hero() {
                             to="projects"
                             smooth={true}
                             duration={500}
+                            className="fade-in-right"
                         >
                             <LayoutGrid className="icon" /> Projects
                         </Link>

@@ -1,17 +1,13 @@
-
+import { Mail, Phone } from 'lucide-react';
 import { FaYoutube, FaLinkedin, FaGithub } from 'react-icons/fa';
 import { ProfileImage } from '../cmps/ProfileImage';
 
-
-
 export function Footer() {
-
-
     return (
         <footer>
-            <div className='info-container'>
-                <p>raydiaz1899@gmail.com</p>
-                <p>058-770-6678</p>
+            <div className="info-container fade-in-left">
+                <p><Mail size={16} style={{ marginRight: '6px' }} /> raydiaz1899@gmail.com</p>
+                <p><Phone size={16} style={{ marginRight: '6px' }} /> 058-770-6678</p>
             </div>
 
             <div className='links-container'>
@@ -26,7 +22,7 @@ export function Footer() {
                 </a>
             </div>
 
-            <div className='links-container hover'>
+            <div className='links-container hover fade-in-left'>
                 <a href="https://www.youtube.com/@agentCsharp" target="_blank" rel="noopener noreferrer">
                     <FaYoutube />
                 </a>

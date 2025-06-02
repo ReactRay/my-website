@@ -2,3 +2,67 @@ $bg-color: #333;
 $color-light: #bccecb;
 $color-dark: #333;
 $color-light-grey: #777;
+
+/* Upward entrance */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Downward entrance */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Left to right */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Right to left */
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 2s ease-out forwards;
+}
+
+.fade-in-down {
+  animation: fadeInDown 2s ease-out forwards;
+}
+
+.fade-in-left {
+  animation: fadeInLeft 2s ease-out forwards;
+}
+
+.fade-in-right {
+  animation: fadeInRight 2s ease-out forwards;
+}

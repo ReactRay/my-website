@@ -188,13 +188,14 @@
 
   &:hover {
     .icon {
-      color: #558c87;
+      color: #d6bb8a;
+      scale: 1.2;
     }
   }
   .icon {
     width: 1.2rem;
     height: 1.2rem;
-    color: #d6bb8a;
-    transition: color 0.4s;
+    color: #fff;
+    transition: all 0.4s;
   }
 }
