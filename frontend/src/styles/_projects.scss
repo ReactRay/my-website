@@ -125,13 +125,17 @@
 @keyframes apear {
   0% {
     transform: scale(0.8);
+
+    opacity: 0.1;
   }
   45%,
   55% {
     transform: scale(1);
+    opacity: 1;
   }
   100% {
     transform: scale(0.8);
+    opacity: 0.1;
   }
 }
 .projects-section {
@@ -165,13 +169,16 @@
   @keyframes apear {
     0% {
       transform: scale(0.6);
+      opacity: 0;
     }
     45%,
     55% {
       transform: scale(1);
+      opacity: 1;
     }
     100% {
       transform: scale(0.6);
+      opacity: 0;
     }
   }
   .projects-section {
@@ -188,14 +195,16 @@
 
   &:hover {
     .icon {
-      color: #d6bb8a;
+      color: #fff;
+
       scale: 1.2;
     }
   }
   .icon {
+    color: #d6bb8a;
+
     width: 1.2rem;
     height: 1.2rem;
-    color: #fff;
     transition: all 0.4s;
   }
 }

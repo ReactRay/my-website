@@ -40,11 +40,11 @@
 
     svg {
       transition: transform 0.3s ease;
+      color: #d6bb8a;
     }
 
     &:hover svg {
       transform: scale(1.2);
-      color: #d6bb8a;
     }
   }
 }
