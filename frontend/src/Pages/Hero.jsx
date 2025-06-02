@@ -22,7 +22,7 @@ export function Hero() {
                 <div className="animated-text" >
                     <div className="hero">
                         <h1 className="welcome fade-in-up">
-                            Hello, I'm Radwan <hr />
+                            Hello, I'm Radwan
                             <h1 className="fade-in-down"><Typewriter {...props} /> </h1>
                         </h1>
                         <h3 className="ocean fade-in-down">welcome to my ocean</h3>
