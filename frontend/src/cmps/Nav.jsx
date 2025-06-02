@@ -42,7 +42,7 @@ export function Nav({ isMobile }) {
                     duration={500}
                 >
                     <Mail size={18} style={{ marginRight: '6px' }} />
-                    Contact me
+                    Contact
                 </Link>
             </ul>
         </div>
