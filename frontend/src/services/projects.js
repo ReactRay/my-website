@@ -1,5 +1,32 @@
 export const prj = [
   {
+    id: '/adoptme',
+    name: 'Adopt Me ISR (Production Project)',
+    description:
+      'A production-level mobile app that connects animal shelters with adopters in a Tinder-style swipe experience. With over 4,000 users, it supports live application flows, shelter dashboards, and multi-party communication. Built with React Native (Expo), MongoDB, and Express, it integrates APIs like Monday.com and WhatsApp Business.',
+    technologies: [
+      'React Native',
+      'Expo',
+      'Express',
+      'MongoDB',
+      'Zustand',
+      'Cloudinary',
+      'Monday API',
+      'WhatsApp Business API',
+    ],
+    img: 'https://res.cloudinary.com/danlxus36/image/upload/v1749056904/2_adbrxe.png',
+    github: '',
+    demo: 'https://www.adoptmeisrael.com/',
+    video:
+      'https://res.cloudinary.com/danlxus36/video/upload/v1749057302/%D7%94%D7%93%D7%A8%D7%9A_%D7%A9%D7%9C_%D7%91%D7%A8%D7%95%D7%A0%D7%95_%D7%9E%D7%94%D7%9B%D7%9C%D7%95%D7%91_%D7%90%D7%9C_%D7%94%D7%91%D7%99%D7%AA_%D7%90%D7%A0%D7%97%D7%A0%D7%95_%D7%9C%D7%90_%D7%91%D7%95%D7%9B%D7%99%D7%9D_%D7%A0%D7%9B%D7%A0%D7%A1_%D7%9C%D7%A0%D7%95_%D7%9B%D7%9C%D7%91_%D7%A9%D7%90%D7%95%D7%9E%D7%A5_%D7%9C%D7%A2%D7%99%D7%9F_anm_digital_studio_xv1xkx.mp4',
+    imgArr: [
+      'https://res.cloudinary.com/danlxus36/image/upload/v1749056904/1_vtfbvn.png',
+      'https://res.cloudinary.com/danlxus36/image/upload/v1749056904/3_l2vlv5.png',
+      'https://res.cloudinary.com/danlxus36/image/upload/v1749056904/4_ouuszz.png',
+    ],
+  },
+
+  {
     id: '/crafty',
     name: 'Crafty',
     description:
@@ -15,17 +42,15 @@ export const prj = [
     ],
     img: 'https://res.cloudinary.com/danlxus36/image/upload/v1747322931/Screenshot_2_ayhroh.png',
     github: 'https://github.com/ReactRay/ForAFriend',
-    demo: 'https://forafriend.vercel.app/',
+    demo: '',
     video:
       'https://res.cloudinary.com/danlxus36/video/upload/v1747420895/2025-05-15_18-46-57_dr0x61.mp4',
     imgArr: [
       'https://res.cloudinary.com/danlxus36/image/upload/v1747322931/Screenshot_2_ayhroh.png',
       'https://res.cloudinary.com/danlxus36/image/upload/v1747322931/Screenshot_5_vinuju.png',
-
       'https://res.cloudinary.com/danlxus36/image/upload/v1747322930/Screenshot_1_f0v9k7.png',
     ],
   },
-
   {
     id: '/layale',
     name: 'Demascus Nights',
@@ -34,7 +59,7 @@ export const prj = [
     technologies: ['HTML', 'CSS'],
     img: 'https://res.cloudinary.com/danlxus36/image/upload/v1747403723/l1_e0mh5b.png',
     github: 'https://github.com/ReactRay/Layale',
-    demo: 'https://layale.vercel.app/', //
+    demo: 'https://layale.vercel.app/',
     video:
       'https://res.cloudinary.com/danlxus36/video/upload/v1747403638/2025-05-16_16-52-20_jgiuy9.mp4',
     imgArr: [
@@ -43,7 +68,6 @@ export const prj = [
       'https://res.cloudinary.com/danlxus36/image/upload/v1747403724/l3_vdi7ek.png',
     ],
   },
-
   {
     id: '/quizzy',
     name: 'Quizzy',
@@ -65,7 +89,7 @@ export const prj = [
     id: '/planmate',
     name: 'PlanMate',
     description:
-      'Ai powered  productivity planner that allows users to manage their day by organizing tasks . It features drag-and-drop, plan reset, and task group switching.',
+      'Ai powered productivity planner that allows users to manage their day by organizing tasks . It features drag-and-drop, plan reset, and task group switching.',
     technologies: [
       'React',
       'Zustand',
@@ -105,7 +129,7 @@ export const prj = [
     id: '/chatify',
     name: 'Chatify',
     description:
-      'a real-time music streaming web app — a modern Spotify-style clone that allows users to listen to music, chat live, and see what others are playing. Admins can upload albums and tracks to be shared across all users. This app does not use Spotify or YouTube APIs — all music is hosted and managed directly.',
+      'A real-time music streaming web app — a modern Spotify-style clone that allows users to listen to music, chat live, and see what others are playing. Admins can upload albums and tracks to be shared across all users. This app does not use Spotify or YouTube APIs — all music is hosted and managed directly.',
     technologies: [
       'React',
       'Zustand',
@@ -172,6 +196,23 @@ export const prj = [
       'https://res.cloudinary.com/danlxus36/image/upload/v1743385875/todo1_o0xm00.png',
       'https://res.cloudinary.com/danlxus36/image/upload/v1743385875/todo3_wewj8w.png',
       'https://res.cloudinary.com/danlxus36/image/upload/v1743385875/todo2_ojvlfr.png',
+    ],
+  },
+  {
+    id: '/bookworm',
+    name: 'Book Worm',
+    description:
+      'A mobile CRUD app built with React Native and Express, where users can post pictures and recommend books to each other using a shared feed. Designed to foster a reading community through user-generated book posts.',
+    technologies: ['React Native', 'Expo', 'Express', 'MongoDB', 'Zustand'],
+    img: 'https://res.cloudinary.com/danlxus36/image/upload/v1749055537/Screenshot_2_t1a76f.png',
+    github: 'https://github.com/ReactRay/book-worm',
+    demo: '',
+    video:
+      'https://res.cloudinary.com/danlxus36/video/upload/v1749054617/2025-06-04_19-15-27_csa27h.mp4',
+    imgArr: [
+      'https://res.cloudinary.com/danlxus36/image/upload/v1749055537/Screenshot_2_t1a76f.png',
+      'https://res.cloudinary.com/danlxus36/image/upload/v1749055537/Screenshot_3_atvjrb.png',
+      'https://res.cloudinary.com/danlxus36/image/upload/v1749055537/Screenshot_1_dixl7c.png',
     ],
   },
 ]
