@@ -3,10 +3,12 @@ import cors from 'cors'
 import dotenv from 'dotenv' // Correct import for dotenv
 import { commentRoutes } from './api/comment.routes.js'
 import { sendEmail } from './services/nodeMailer.service.js'
-
+import job from './cron.js'
 const app = express()
 
 dotenv.config()
+
+job.start()
 
 const corsOptions = {
   origin: ['http://127.0.0.1:5173', 'http://localhost:5173'],
