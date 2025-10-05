@@ -1,9 +1,10 @@
 import express from 'express'
 import cors from 'cors'
-import dotenv from 'dotenv' // Correct import for dotenv
+import dotenv from 'dotenv'
 import { commentRoutes } from './api/comment.routes.js'
 import { sendEmail } from './services/nodeMailer.service.js'
 import job from './cron.js'
+import pingRoute from './api/ping.route.js'
 const app = express()
 
 dotenv.config()
@@ -19,6 +20,7 @@ app.use(cors(corsOptions))
 app.use(express.json())
 app.use(express.static('public'))
 app.use('/api/comments', commentRoutes)
+app.use('/api/ping', pingRoute)
 
 const PORT = process.env.PORT || 3030
 

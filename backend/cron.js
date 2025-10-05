@@ -1,7 +1,7 @@
 import cron from 'node-cron'
 import axios from 'axios'
 
-const URL = 'https://www.radwan-mansur.com/'
+const URL = 'https://www.radwan-mansur.com/api/ping'
 
 const job = cron.schedule('*/14 * * * *', async () => {
   try {
