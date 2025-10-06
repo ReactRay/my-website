@@ -5,7 +5,9 @@ import { FolderKanban, Smile, Mail } from 'lucide-react';
 export function Nav({ isMobile }) {
     return (
         <div className="nav">
+
             <ul className="fade-in-right">
+
                 <Link
                     onClick={() => showSuccessMsg('Welcome to Projects.')}
                     className="nav-link"

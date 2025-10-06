@@ -4,12 +4,9 @@ footer {
   font-size: 2rem;
   display: flex;
   gap: 2rem;
-  justify-content: center;
-  align-items: center;
 
   .links-container {
     display: flex;
-    justify-content: center;
     align-items: center;
     gap: 1rem;
     font-size: 1.7rem;
@@ -41,20 +38,20 @@ footer {
 .hover {
   position: fixed;
   flex-direction: column;
-  top: 15rem;
+  top: 1rem;
   left: 1rem;
   z-index: 2;
 }
 
 @media (max-width: 700px) {
+  footer {
+    flex-direction: column;
+  }
+  .links-container {
+    justify-content: flex-start;
+  }
   .links-container.hover {
-    position: absolute;
-    flex-direction: row;
-    top: 1%;
-    left: 50%;
-    right: 50%;
-    font-size: 2.1rem;
-    gap: 1.8rem;
+    font-size: 01rem;
   }
   .info-container {
     flex-direction: column;

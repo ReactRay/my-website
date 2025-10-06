@@ -17,14 +17,19 @@ export function Hero() {
 
     return (
         <div className="first-section">
+
             <ParticleBackground color="" /> {/* Assuming you want particles */}
             <div className="home-container">
+
                 <div className="animated-text" >
                     <div className="hero">
                         <h1 className="welcome fade-in-up">
                             Hello, I'm Radwan
-                            <h1 className="fade-in-down"><Typewriter {...props} /> </h1>
+                            <ProfileImage />
+
+
                         </h1>
+                        <h1 className="fade-in-down"><Typewriter {...props} /> </h1>
                         <h3 className="ocean fade-in-down">welcome to my ocean</h3>
                     </div>
                     <div className="link-box ">
@@ -48,6 +53,7 @@ export function Hero() {
                     </div>
                 </div>
             </div>
+
         </div>
     )
 }
