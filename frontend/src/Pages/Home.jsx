@@ -17,7 +17,7 @@ export function Home({ projects, isMobile }) {
             <Nav isMobile={isMobile} />
             <Hero />
             <Projects projects={projects} />
-            <Comments />
+            {!isMobile && <Comments />}
             <ContactMe />
             <Footer />
         </div>
