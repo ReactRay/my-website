@@ -7,7 +7,7 @@
   margin: 0 auto;
   z-index: 1;
   background-color: rgba(240, 239, 239, 0.01); // fixed the $color/$alpha usage
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(7px);
 
   ul {
     display: flex;

@@ -1,8 +1,9 @@
 .comment-section {
   margin-top: 4rem;
-  padding: 0 1rem;
+  padding: 5rem 0rem;
   width: 100%;
   box-sizing: border-box;
+  height: 100dvh;
 
   h2 {
     font-size: 3rem;
@@ -17,13 +18,13 @@
 .comment-form {
   display: flex;
   align-items: center;
-  margin-top: 5rem;
+  margin-top: 3rem;
   gap: 1rem;
 
   input {
     width: 100%;
     backdrop-filter: blur(5px);
-    padding: 1rem;
+    padding: 0.5rem;
     border: 3px solid transparent;
     border-radius: 4px;
     background-color: rgba($color: #fff, $alpha: 0.1);
@@ -46,7 +47,7 @@
     color: #fff;
     font-size: 1.2rem;
     border: 1px solid transparent;
-    padding: 0.5rem 1.2rem;
+    padding: 0.5rem;
     font-family: 'quicksand', sans-serif;
     transition: all 0.5s ease-in-out;
     cursor: pointer;
@@ -59,13 +60,12 @@
 }
 
 .comment-container {
-  margin-top: 1rem;
   background-color: rgba($color: #fff, $alpha: 0.05);
-
+  margin-top: 1rem;
   padding: 1rem;
+  border: 1px solid #ffffff0c;
   border-radius: 4px;
-
-  max-height: 70vh;
+  max-height: 60vh;
   overflow-y: auto;
 }
 
@@ -80,9 +80,9 @@
 }
 
 .comment-card {
-  background-color: rgba($color: #e6ebeb, $alpha: 0.1);
-  backdrop-filter: blur(3px);
-  padding: 0.5rem 2rem;
+  background-color: rgba($color: #e6ebeb6d, $alpha: 0.1);
+  backdrop-filter: blur(5px);
+  padding: 0.2rem 1rem;
   border-radius: 4px;
   display: flex;
   align-items: center;
@@ -102,8 +102,8 @@
   }
 
   img {
-    width: 2.6rem;
-    height: 2.6rem;
+    width: 2.3rem;
+    height: 2.3rem;
   }
 }
 
