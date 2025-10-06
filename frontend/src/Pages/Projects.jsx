@@ -8,7 +8,7 @@ export function Projects({ projects }) {
     return (
 
         <Element name="projects" className="projects-section">
-            <h2>projects</h2>
+            <h3>projects</h3>
             <div className="projects-container" >
                 {projects.map((project, index) => {
                     return (

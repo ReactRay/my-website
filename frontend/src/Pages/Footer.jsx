@@ -3,6 +3,7 @@ import { FaYoutube, FaLinkedin, FaGithub } from 'react-icons/fa';
 import { ProfileImage } from '../cmps/ProfileImage';
 
 export function Footer() {
+    const isMobile = window.innerWidth <= 768;
     return (
         <footer>
             <div className="info-container fade-in-left">
@@ -22,7 +23,7 @@ export function Footer() {
                 </a>
             </div>
 
-            <div className='links-container hover fade-in-left'>
+            {!isMobile && <div className='links-container hover fade-in-left'>
                 <a href="https://www.youtube.com/@agentCsharp" target="_blank" rel="noopener noreferrer">
                     <FaYoutube />
                 </a>
@@ -32,7 +33,7 @@ export function Footer() {
                 <a href="https://github.com/ReactRay" target="_blank" rel="noopener noreferrer">
                     <FaGithub />
                 </a>
-            </div>
+            </div>}
         </footer>
     )
 }
