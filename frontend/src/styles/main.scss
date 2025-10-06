@@ -23,12 +23,13 @@
 body {
   background: linear-gradient(
     -35deg,
-    #000000,
-    #0d2747,
-    #146565,
-    #012947,
-    #62d0d2
+    #160841,
+    #8b327b,
+    #743159,
+    #ae632e,
+    #b979a7
   );
+
   color: #ffffff;
   font-family: 'Quicksand', sans-serif;
   margin: 0;
@@ -72,21 +73,11 @@ a {
     width: 85%;
     padding: 0;
   }
-  body {
-    background: linear-gradient(
-      -55deg,
-      #000000,
-      #0d2747,
-      #146565,
-      #012947,
-      #62d0d2
-    );
-  }
-}
 
-@media (max-width: 480px) {
-  .main-container {
-    width: 85%;
-    padding: 0;
+  @media (max-width: 480px) {
+    .main-container {
+      width: 85%;
+      padding: 0;
+    }
   }
 }
