@@ -1,42 +1,35 @@
-import { useState, useRef, useEffect } from "react";
-import { eventBusService } from "../services/event-bus.service.js";
+import { useEffect, useState } from 'react';
+import { eventBusService } from '../services/event-bus.service';
 
 export function UserMsg() {
   const [msg, setMsg] = useState(null);
-  const [isFadingOut, setIsFadingOut] = useState(false);
-  const timeoutIdRef = useRef();
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const unsubscribe = eventBusService.on('show-user-msg', (msg) => {
-      setMsg(msg);
+    const unsubscribe = eventBusService.on('show-user-msg', (newMsg) => {
+      setMsg(newMsg);
+      setIsVisible(true);
 
+      // Start a fade-out timer
+      setTimeout(() => {
+        setIsVisible(false);
+      }, 2000); // duration before fade out
 
-      if (timeoutIdRef.current) {
-        clearTimeout(timeoutIdRef.current);
-      }
-
-
-      timeoutIdRef.current = setTimeout(() => {
-        setIsFadingOut(true);
-        setTimeout(closeMsg, 1500);
-      }, 1600);
+      // Fully remove message after fade animation
+      setTimeout(() => {
+        setMsg(null);
+      }, 2600);
     });
 
-    return unsubscribe;
+    return () => unsubscribe();
   }, []);
 
-  function closeMsg() {
-    setMsg(null);
-    setIsFadingOut(false);
-  }
-
-  if (!msg) return <span></span>;
+  if (!msg) return null;
 
   return (
-    <section
-      className={`user-msg ${msg.type} ${isFadingOut ? 'fade-out' : ''}`}
-    >
-      {msg.txt}
-    </section>
+    <div className={`user-msg ${msg.type} ${!isVisible ? 'fade-out' : ''}`}>
+      <p>{msg.txt}</p>
+      <button onClick={() => setIsVisible(false)}>✕</button>
+    </div>
   );
 }
