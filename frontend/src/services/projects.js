@@ -1,9 +1,9 @@
 export const prj = [
   {
     id: '/adoptme',
-    name: 'Adopt Me ISR (Production Project)',
+    name: 'Adopt Me ISR ',
     description:
-      'A production-level mobile app that connects animal shelters with adopters in a Tinder-style swipe experience. With over 4,000 users, Built with React Native (Expo), MongoDB, and Express, it integrates APIs like Monday.com and WhatsApp Business.',
+      'A production-level mobile app connecting animal shelters with adopters in a Tinder-style experience. Built with React Native, Express, and MongoDB, integrating Monday.com and WhatsApp APIs for live adoption management.',
     technologies: [
       'React Native',
       'Expo',
@@ -30,7 +30,7 @@ export const prj = [
     id: '/crafty',
     name: 'Crafty',
     description:
-      'A Fiverr-style freelance platform built for quick job posting and request handling. Users can post gigs, comment, submit requests, and pay using PayPal. Admins can accept or reject requests. The project was a freelance gig completed under tight deadlines for a student’s final project.',
+      'A Fiverr-style freelance platform for quick gig posting, payments, and request handling. Users can post jobs, comment, and pay via PayPal, while admins approve or reject requests. Built with React, Express, MongoDB, and Cloudinary.',
     technologies: [
       'React',
       'Express',
@@ -51,11 +51,12 @@ export const prj = [
       'https://res.cloudinary.com/danlxus36/image/upload/v1747322930/Screenshot_1_f0v9k7.png',
     ],
   },
+
   {
     id: '/layale',
     name: 'Demascus Nights',
     description:
-      'A beautiful and responsive website for my family’s Middle Eastern restaurant. Features a welcoming introduction, full menu, image gallery, and a direct Waze link for easy navigation.',
+      'A responsive website for a Middle Eastern restaurant featuring a full digital menu, welcoming intro, and gallery with a direct Waze link. Designed for simplicity, speed, and elegance using HTML and CSS only.',
     technologies: ['HTML', 'CSS'],
     img: 'https://res.cloudinary.com/danlxus36/image/upload/v1747403723/l1_e0mh5b.png',
     github: 'https://github.com/ReactRay/Layale',
@@ -68,11 +69,12 @@ export const prj = [
       'https://res.cloudinary.com/danlxus36/image/upload/v1747403724/l3_vdi7ek.png',
     ],
   },
+
   {
     id: '/quizzy',
     name: 'Quizzy',
     description:
-      'An AI-powered quiz generator that creates custom quizzes based on your chosen topic. Designed to make learning interactive and fun!',
+      'An AI-driven quiz generator that creates customized quizzes from any topic. Built with React, Express, and MongoDB, it delivers a fun and educational experience through real-time AI-based question generation.',
     technologies: ['React', 'Express', 'Mongoose', 'JWT', 'Zustand'],
     img: 'https://res.cloudinary.com/danlxus36/image/upload/v1745828860/quizzy1_hqhwxy.png',
     github: 'https://github.com/ReactRay/quizy',
@@ -85,11 +87,12 @@ export const prj = [
       'https://res.cloudinary.com/danlxus36/image/upload/v1745828860/quizzy4_ir1vnk.png',
     ],
   },
+
   {
     id: '/planmate',
     name: 'PlanMate',
     description:
-      'Ai powered productivity planner that allows users to manage their day by organizing tasks . It features drag-and-drop, plan reset, and task group switching.',
+      'An AI-powered productivity planner that helps users organize their day using draggable task groups and dynamic lists. Built with React, Express, and MongoDB, featuring plan resets, cloud sync, and smart task grouping.',
     technologies: [
       'React',
       'Zustand',
@@ -109,11 +112,12 @@ export const prj = [
       'https://res.cloudinary.com/danlxus36/image/upload/v1745062528/planmate2_vd71le.png',
     ],
   },
+
   {
     id: '/someday',
-    name: 'Someday ',
+    name: 'Someday',
     description:
-      'A task management app inspired by Monday.com. Features Kanban boards, draggable tasks, and group management.',
+      'A task management web app inspired by Monday.com. Includes draggable Kanban boards, task groups, and real-time updates via WebSockets. Designed for intuitive project tracking and teamwork using React and Express.',
     technologies: ['React', 'Redux', 'Express', 'Sockets io', 'MongoDB'],
     img: '/someday.png',
     github: 'https://github.com/ReactRay/SomeDay',
@@ -125,11 +129,12 @@ export const prj = [
       'https://res.cloudinary.com/danlxus36/image/upload/v1743385875/someday4_bnzz8p.png',
     ],
   },
+
   {
     id: '/chatify',
     name: 'Chatify',
     description:
-      'A real-time music streaming web app — a modern Spotify-style clone that allows users to listen to music, chat live, and see what others are playing. Admins can upload albums and tracks to be shared across all users. This app does not use Spotify or YouTube APIs — all music is hosted and managed directly.',
+      'A real-time music streaming platform that allows users to play, chat, and share music in a social space. Admins manage uploads, users can interact live, and all content is self-hosted without Spotify or YouTube APIs.',
     technologies: [
       'React',
       'Zustand',
@@ -150,11 +155,12 @@ export const prj = [
       'https://res.cloudinary.com/danlxus36/image/upload/v1744712597/chatify4_bsfppn.png',
     ],
   },
+
   {
     id: '/talkyWocky',
     name: 'TalkyWocky',
     description:
-      'A chat app with responsive layout and a wide array of themes to choose from , providing quick live chat supporting text and image transfer.',
+      'A responsive chat app supporting live messaging, image sharing, and theme customization. Built with React, Express, and WebSockets for fast, reliable real-time communication with a polished modern interface.',
     technologies: ['React', 'Express', 'Sockets io', 'MongoDB', 'Mongoose'],
     img: '/chatty2.png',
     github: 'https://github.com/ReactRay/chatty',
@@ -166,11 +172,12 @@ export const prj = [
       'https://res.cloudinary.com/danlxus36/image/upload/v1744071823/chatty3_qrdvxy.png',
     ],
   },
+
   {
     id: '/missBugs',
     name: 'MissBugs',
     description:
-      'A bug tracking system where users can report, update, and manage bugs. Full CRUD with a clean UI.',
+      'A clean and efficient bug tracking system that lets users report, update, and manage issues visually. Provides full CRUD support with intuitive UI built using React, Express, and MongoDB for smooth teamwork.',
     technologies: ['React', 'Express', 'MongoDB'],
     img: '/bugs1.png',
     github: 'https://github.com/ReactRay/bug-report-project',
@@ -182,11 +189,12 @@ export const prj = [
       'https://res.cloudinary.com/danlxus36/image/upload/v1743385875/bugs2_yptvdd.png',
     ],
   },
+
   {
     id: '/todos',
     name: 'Todos',
     description:
-      'A simple todo app with full CRUD functionality. Built to help users stay productive and organized.',
+      'A simple and fast to-do app with full CRUD functionality for tracking daily tasks. Designed to be responsive, minimal, and easy to use, keeping productivity front and center across devices.',
     technologies: ['React'],
     img: '/todo.png',
     github: 'https://github.com/ReactRay/RM-TODOS',
@@ -198,11 +206,12 @@ export const prj = [
       'https://res.cloudinary.com/danlxus36/image/upload/v1743385875/todo2_ojvlfr.png',
     ],
   },
+
   {
     id: '/bookworm',
     name: 'Book Worm',
     description:
-      'A mobile CRUD app built with React Native and Express, where users can post pictures and recommend books to each other using a shared feed. Designed to foster a reading community through user-generated book posts.',
+      'A mobile CRUD app built with React Native and Express that lets users post and share books in a social feed. Encourages community engagement and reading culture with cloud storage and live updates.',
     technologies: ['React Native', 'Expo', 'Express', 'MongoDB', 'Zustand'],
     img: 'https://res.cloudinary.com/danlxus36/image/upload/v1749055537/Screenshot_2_t1a76f.png',
     github: 'https://github.com/ReactRay/book-worm',
