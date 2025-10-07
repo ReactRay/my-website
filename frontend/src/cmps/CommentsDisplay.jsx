@@ -1,44 +1,12 @@
-import { CommentCard } from "./CommentCard"
-import {
-    DragDropContext,
-    Droppable,
-    Draggable,
-} from "@hello-pangea/dnd"
+import { memo } from "react";
+import { CommentCard } from "./CommentCard";
 
-export function CommentsDisplay({ comments = [], onDragEnd }) {
-    return (
-        <div className="comment-container">
-            <DragDropContext onDragEnd={onDragEnd}>
-                <Droppable droppableId="comments">
-                    {(provided) => (
-                        <div
-                            {...provided.droppableProps}
-                            ref={provided.innerRef}
-                            className="comment-list"
-                        >
-                            {comments.map((comment, index) => (
-                                <Draggable
-                                    key={comment.user + index}
-                                    draggableId={comment.user + index}
-                                    index={index}
-                                >
-                                    {(provided) => (
-                                        <div
-                                            className="draggable-card"
-                                            ref={provided.innerRef}
-                                            {...provided.draggableProps}
-                                            {...provided.dragHandleProps}
-                                        >
-                                            <CommentCard {...comment} />
-                                        </div>
-                                    )}
-                                </Draggable>
-                            ))}
-                            {provided.placeholder}
-                        </div>
-                    )}
-                </Droppable>
-            </DragDropContext>
+export const CommentsDisplay = memo(({ comments }) => (
+    <div className="comment-container">
+        <div className="comment-list">
+            {comments.map((comment, index) => (
+                <CommentCard key={comment.id || index} {...comment} />
+            ))}
         </div>
-    )
-}
+    </div>
+));

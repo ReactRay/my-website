@@ -1,26 +1,46 @@
+import { useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 import { ProjectCard } from "../cmps/ProjectCard";
-import { Element } from 'react-scroll';
-
+import { ProjectModal } from "./ProjectModal";
+import { Element } from "react-scroll";
 
 export function Projects({ projects }) {
-
+    const [selectedProject, setSelectedProject] = useState(null);
 
     return (
-
         <Element name="projects" className="projects-section">
-            <h3>projects</h3>
-            <div className="projects-container" >
-                {projects.map((project, index) => {
-                    return (
+            <h3 className="projects-title">Projects</h3>
 
-                        <ProjectCard key={project.name + index} project={project} />
+            <Swiper
+                modules={[Navigation, Pagination]}
+                spaceBetween={40}
+                slidesPerView={1}
+                navigation
+                pagination={{ clickable: true }}
+                breakpoints={{
+                    768: { slidesPerView: 2 },
+                    1200: { slidesPerView: 3 },
+                }}
+            >
+                {projects.map((project, index) => (
+                    <SwiperSlide key={index}>
+                        <div onClick={() => setSelectedProject(project)}>
+                            <ProjectCard project={project} />
+                        </div>
+                    </SwiperSlide>
+                ))}
+            </Swiper>
 
-                    )
-                })}
-
-            </div>
-
+            {selectedProject && (
+                <ProjectModal
+                    project={selectedProject}
+                    onClose={() => setSelectedProject(null)}
+                />
+            )}
         </Element>
-
-    )
+    );
 }

@@ -1,111 +1,92 @@
-import { useEffect, useState } from "react"
-import { CommentsDisplay } from "../cmps/CommentsDisplay"
-import { query, post } from "../services/comment.actions"
-import { ImagePicker } from "../cmps/ImagePicker.jsx"
-import { Popover } from "@mui/material"
-import { Element } from "react-scroll"
-import { showSuccessMsg } from "../services/event-bus.service.js"
-import { SendHorizontal } from 'lucide-react'
+import { useEffect, useState, useCallback } from "react";
+import { CommentsDisplay } from "../cmps/CommentsDisplay";
+import { query, post } from "../services/comment.actions";
+import { ImagePicker } from "../cmps/ImagePicker.jsx";
+import { Popover } from "@mui/material";
+import { Element } from "react-scroll";
+import { showSuccessMsg } from "../services/event-bus.service.js";
+import { SendHorizontal } from "lucide-react";
 
 export function Comments() {
-
-    const [comments, setComments] = useState([])
-    const [messege, setMessege] = useState({ user: '', text: '', img: "https://res.cloudinary.com/danlxus36/image/upload/v1742863576/4_dstrzt.png" })
+    const [comments, setComments] = useState([]);
+    const [message, setMessage] = useState({
+        user: "",
+        text: "",
+        img: "https://res.cloudinary.com/danlxus36/image/upload/v1742863576/4_dstrzt.png",
+    });
     const [anchorEl, setAnchorEl] = useState(null);
 
     useEffect(() => {
-        getComments()
-    }, [])
+        (async () => {
+            const data = await query();
+            setComments(data);
+        })();
+    }, []);
 
-    const handleClick = (event) => {
-        setAnchorEl(event.currentTarget);
+    const handleClick = (e) => setAnchorEl(e.currentTarget);
+    const handleClose = () => setAnchorEl(null);
+
+    const handleImageClick = useCallback((img) => {
+        setMessage((prev) => ({ ...prev, img }));
+        handleClose();
+    }, []);
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        if (!message.user.trim() || !message.text.trim()) return;
+        const newComment = { ...message, id: Date.now() };
+        setComments((prev) => [newComment, ...prev]);
+        await post(message);
+        showSuccessMsg(`Thanks for your message, ${message.user}!`);
+        setMessage({
+            user: "",
+            text: "",
+            img: "https://res.cloudinary.com/danlxus36/image/upload/v1742863576/4_dstrzt.png",
+        });
     };
-
-    const handleClose = () => {
-        setAnchorEl(null);
-    };
-
-    async function getComments() {
-        const comments = await query();
-        setComments(comments)
-        console.log(comments, ' yay !')
-    }
-
-    async function handleSubmit(e) {
-        e.preventDefault()
-        const comment = await post(messege)
-        setComments((prev) => [messege, ...prev,])
-        showSuccessMsg(`thank you for posting ${messege.user} !`)
-        setMessege({ user: '', text: '', img: "https://res.cloudinary.com/danlxus36/image/upload/v1742863576/4_dstrzt.png" })
-
-    }
-
-    function reorder(list, startIndex, endIndex) {
-        const result = Array.from(list)
-        const [removed] = result.splice(startIndex, 1)
-        result.splice(endIndex, 0, removed)
-        return result
-    }
-
-    function onDragEnd(result) {
-        if (!result.destination) return
-        const newComments = reorder(
-            comments,
-            result.source.index,
-            result.destination.index
-        )
-        setComments(newComments)
-        showSuccessMsg('dragged successfully!')
-    }
-
-    function handleImageClick(img) {
-        setMessege((prev) => ({ ...prev, img: img }))
-        handleClose()
-
-    }
-
-    const open = Boolean(anchorEl);
-    const id = open ? 'simple-popover' : undefined;
-
-
-
-
 
     return (
-
         <Element name="comments" className="comment-section">
-            <h2>say something nice </h2>
+            <h2>Say something nice</h2>
+
             <form className="comment-form" onSubmit={handleSubmit}>
-                <div className="form-group">
-
-
-                    <input value={messege.user} type="text" placeholder="your name" onChange={(e) => setMessege((prev) => ({ ...prev, user: e.target.value }))} required />
-                </div>
-                <div className="form-group">
-                    <input value={messege.text} type="text" placeholder="say something nice" onChange={(e) => setMessege((prev) => ({ ...prev, text: e.target.value }))} required />
-                </div>
-                <div><img onClick={handleClick} className="img-picker-btn" src={messege.img} alt="img" width={'50px'} height={'50px'} /></div>
-                <div>
-                    <button type="submit">
-                        <SendHorizontal className="icon" /> Submit
-                    </button>
-                </div>
+                <input
+                    value={message.user}
+                    type="text"
+                    placeholder="Your name"
+                    onChange={(e) => setMessage((prev) => ({ ...prev, user: e.target.value }))}
+                    required
+                />
+                <input
+                    value={message.text}
+                    type="text"
+                    placeholder="Say something nice..."
+                    onChange={(e) => setMessage((prev) => ({ ...prev, text: e.target.value }))}
+                    required
+                />
+                <img
+                    onClick={handleClick}
+                    className="img-picker-btn"
+                    src={message.img}
+                    alt="avatar"
+                    width="50"
+                    height="50"
+                />
+                <button type="submit">
+                    <SendHorizontal className="icon" /> Send
+                </button>
             </form>
 
-            <CommentsDisplay comments={comments} onDragEnd={onDragEnd} />
+            <CommentsDisplay comments={comments} />
 
             <Popover
-                id={id}
-                open={open}
+                open={Boolean(anchorEl)}
                 anchorEl={anchorEl}
                 onClose={handleClose}
-                anchorOrigin={{
-                    vertical: 'bottom',
-                    horizontal: 'left',
-                }}
+                anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
             >
                 <ImagePicker handleImageClick={handleImageClick} />
             </Popover>
         </Element>
-    )
+    );
 }

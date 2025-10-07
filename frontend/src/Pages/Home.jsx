@@ -1,23 +1,17 @@
+import { Hero } from "./Hero"
+import { Nav } from "../cmps/Nav"
+import { Projects } from "./Projects"
+import { Comments } from "./Comments"
+import { ContactMe } from "./ContactMe"
+import { Footer } from "./Footer"
 
-import { Hero } from "./Hero.jsx"
-import { Nav } from "../cmps/Nav.jsx"
-import { Projects } from "./Projects.jsx"
-import { Comments } from "./Comments.jsx"
-import { ContactMe } from "./ContactMe.jsx"
-import { Footer } from "./Footer.jsx"
 export function Home({ projects, isMobile }) {
-
-
-
-
-
-
     return (
         <div className="main-container">
             <Nav isMobile={isMobile} />
             <Hero />
             <Projects projects={projects} />
-            {!isMobile && <Comments />}
+            <Comments />
             <ContactMe />
             <Footer />
         </div>

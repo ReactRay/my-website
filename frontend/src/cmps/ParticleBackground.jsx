@@ -1,66 +1,52 @@
-import React from "react";
+import { memo } from "react";
 import Particles from "react-tsparticles";
 import { loadSlim } from "tsparticles-slim";
 
-const ParticleBackground = ({ color }) => {
+const ParticleBackground = memo(({ color = "#ffffff" }) => {
     const particlesInit = async (engine) => {
         await loadSlim(engine);
     };
 
-    const isMobile = window.innerWidth <= 768; // Simple mobile check
+    const isMobile = window.innerWidth <= 768;
 
     return (
-        <div className="particles" >
-            <Particles
-                id="tsparticles"
-                init={particlesInit}
-                style={{
-                    position: "absolute",
-                    top: 0,
-                    left: 0,
-                    bottom: 0,
-                    zIndex: -1,
-                    width: "100vw",
-                    height: "100vh",
-                }}
-                options={{
-                    fullScreen: { enable: false },
-                    background: { color: { value: color } },
-                    fpsLimit: 40,
-                    interactivity: {
-                        events: {
-                            onHover: { enable: !isMobile, mode: "repulse" }, // Disable hover on mobile
-                            onClick: { enable: false, mode: "push" },
-                        },
-                        modes: {
-                            repulse: { distance: 100 },
-                            push: { quantity: 4 },
-                        },
+        <Particles
+            id="tsparticles"
+            init={particlesInit}
+            style={{
+                position: "absolute",
+                inset: 0,
+                zIndex: 0,
+                pointerEvents: "none",
+            }}
+            options={{
+                fullScreen: { enable: false },
+                background: { color: { value: "transparent" } },
+                fpsLimit: 45,
+                detectRetina: true,
+                interactivity: {
+                    events: {
+                        onHover: { enable: !isMobile, mode: "repulse" },
+                        resize: true,
                     },
-                    particles: {
-                        number: { value: isMobile ? 20 : 100 },
-                        color: { value: "#fff" },
-                        links: {
-                            enable: true,
-                            distance: isMobile ? 70 : 150,
-                            color: "#fff",
-                            opacity: 0.5
-                        },
-                        move: { enable: true, speed: 1.5 },
-                        size: { value: isMobile ? 1 : 2, random: true },
-                    },
-                    move: {
+                    modes: { repulse: { distance: 100, duration: 0.3 } },
+                },
+                particles: {
+                    number: { value: isMobile ? 25 : 60 },
+                    color: { value: color },
+                    links: {
                         enable: true,
-                        speed: 1,
-                        direction: "none",
-                        outModes: { default: "bounce" },
-                        random: true,
-                        straight: false,
+                        distance: isMobile ? 90 : 150,
+                        color: color,
+                        opacity: 0.4,
                     },
-                }}
-            />
-        </div>
+                    move: { enable: true, speed: 0.4 },
+                    size: { value: { min: 1, max: 2 }, random: true },
+                    opacity: { value: 0.5 },
+                },
+            }}
+        />
     );
-};
+});
 
 export default ParticleBackground;

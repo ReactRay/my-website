@@ -3,7 +3,7 @@ export const prj = [
     id: '/adoptme',
     name: 'Adopt Me ISR (Production Project)',
     description:
-      'A production-level mobile app that connects animal shelters with adopters in a Tinder-style swipe experience. With over 4,000 users, it supports live application flows, shelter dashboards, and multi-party communication. Built with React Native (Expo), MongoDB, and Express, it integrates APIs like Monday.com and WhatsApp Business.',
+      'A production-level mobile app that connects animal shelters with adopters in a Tinder-style swipe experience. With over 4,000 users, Built with React Native (Expo), MongoDB, and Express, it integrates APIs like Monday.com and WhatsApp Business.',
     technologies: [
       'React Native',
       'Expo',
