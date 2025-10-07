@@ -2,20 +2,19 @@
   margin-top: 4rem;
   padding: 4rem 1rem;
   width: 100%;
-  text-align: center;
 
   h2 {
-    font-size: 1.6rem;
-    font-weight: 400;
-    text-shadow: 0 0 15px #fff;
-    letter-spacing: 0.2rem;
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-shadow: 4px 4px 20px #fff;
+    letter-spacing: 1.3rem;
+    text-transform: capitalize;
   }
 }
 
 .comment-form {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 1rem;
   margin-top: 2rem;
 
@@ -31,7 +30,7 @@
     transition: 0.3s;
 
     &:focus {
-      border-color: #00cc66;
+      border-color: #d6bb8a;
     }
 
     &::placeholder {

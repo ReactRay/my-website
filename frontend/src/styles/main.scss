@@ -17,7 +17,9 @@
 html {
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
+  overflow-x: hidden;
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -25,31 +27,28 @@ html {
 }
 
 body {
-  background: linear-gradient(
-    -35deg,
-    #160841,
-    #8b327b,
-    #743159,
-    #ae632e,
-    #b979a7
-  );
-
+  background: linear-gradient(-45deg, #1a0b3f, #5e2b75, #9b4b6f, #c57d3a);
+  background-size: 400% 400%;
+  animation: galaxyFlow 15s ease infinite;
   color: #ffffff;
   font-family: 'Quicksand', sans-serif;
   margin: 0;
   padding: 0;
   min-height: 100vh;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 @keyframes galaxyFlow {
   0% {
     background-position: 0% 50%;
   }
-  25% {
-    background-position: 50% 100%;
-  }
   50% {
     background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
 

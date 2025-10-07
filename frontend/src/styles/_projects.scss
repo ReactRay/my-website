@@ -1,16 +1,16 @@
 .projects-section {
   position: relative;
   padding: 6rem 2rem 4rem;
-  text-align: center;
+  height: 100dvh;
 }
 
 .projects-title {
-  font-size: 2.2rem;
+  font-size: 1.5rem;
   font-weight: 300;
-  color: #fff;
-  letter-spacing: 0.5rem;
+  text-shadow: 4px 4px 20px #fff;
+  letter-spacing: 1.3rem;
+  text-transform: capitalize;
   margin-bottom: 3rem;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
 
 /* --- Project Cards --- */
@@ -24,7 +24,6 @@
   text-align: left;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   backdrop-filter: blur(10px);
-  height: 520px; // ✅ consistent height across all cards
   max-width: 420px;
   margin: 0 auto;
 
@@ -173,7 +172,7 @@
 
   .projects-title {
     font-size: 1.8rem;
-    letter-spacing: 0.15rem;
+    letter-spacing: 0.5rem;
   }
 
   .links {
