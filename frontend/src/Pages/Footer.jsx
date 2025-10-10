@@ -1,10 +1,11 @@
 import { Mail, Phone } from 'lucide-react';
 import { FaYoutube, FaLinkedin, FaGithub } from 'react-icons/fa';
-import { ProfileImage } from '../cmps/ProfileImage';
-
 export function Footer() {
+
+
     return (
         <footer className="footer fade-in-up">
+
             <div className="info-container">
                 <p>
                     <Mail size={16} /> raydiaz1899@gmail.com
@@ -24,6 +25,7 @@ export function Footer() {
                 <a href="https://github.com/ReactRay" target="_blank" rel="noopener noreferrer">
                     <FaGithub />
                 </a>
+
             </div>
 
         </footer>

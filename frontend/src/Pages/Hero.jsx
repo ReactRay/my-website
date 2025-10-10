@@ -5,8 +5,16 @@ import ParticleBackground from "../cmps/ParticleBackground";
 import { showSuccessMsg } from "../services/event-bus.service";
 import { Link } from "react-scroll";
 import { FileText, LayoutGrid } from "lucide-react";
-
+import { useState } from "react";
+import { useEffect } from "react";
+import { visitorService } from "../services/visitor.service";
 export function Hero() {
+
+    const [visits, setVisits] = useState(0);
+    useEffect(() => {
+        logVisits();
+    }, [])
+
     const typeProps = {
         words: ["Developer", "Tutor", "YouTuber"],
         typeSpeed: 80,
@@ -14,6 +22,18 @@ export function Hero() {
         loop: false,
         cursor: true,
     };
+
+
+    async function logVisits() {
+        try {
+            const visits = await visitorService.getAllVisits();
+            setVisits(visits.length);
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+
 
     return (
         <section className="first-section">
@@ -29,7 +49,7 @@ export function Hero() {
                     <div className="hero">
                         <h1 className="welcome fade-in-up">
                             Hello, I’m <span>Radwan</span>
-                            <ProfileImage />
+                            <ProfileImage count={visits} />
                         </h1>
 
                         <h1>
