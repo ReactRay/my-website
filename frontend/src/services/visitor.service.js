@@ -8,7 +8,6 @@ export const visitorService = {
 async function trackVisit(website) {
   try {
     const res = await httpService.get(`visitors?website=${website}`)
-    console.log('Visitor tracked:', res)
     return res
   } catch (err) {
     console.error('Failed to track visitor', err)
