@@ -25,7 +25,31 @@ export const prj = [
       'https://res.cloudinary.com/danlxus36/image/upload/v1749056904/4_ouuszz.png',
     ],
   },
-
+  {
+    id: '/rainbow',
+    name: 'Rainbow',
+    description:
+      'A modern web app for designers and developers to create, explore, and save color palettes with shades and tints. Built with React + Vite + TypeScript on the frontend and ASP.NET Core API on Azure for authentication and management.',
+    technologies: [
+      'React',
+      'Vite',
+      'TypeScript',
+      '.NET Core',
+      'Azure',
+      'SQL Server',
+      'Axios',
+      'JWT Authentication',
+    ],
+    img: 'https://res.cloudinary.com/danlxus36/image/upload/v1761918699/rainbow_zozgqw.png',
+    github: 'https://github.com/ReactRay/rainbow-project',
+    demo: 'https://rainbow-project-redw.vercel.app/',
+    video: '', // You can add your video link once it’s uploaded
+    imgArr: [
+      'https://res.cloudinary.com/danlxus36/image/upload/v1761918699/rainbow4_r8zu3v.png',
+      'https://res.cloudinary.com/danlxus36/image/upload/v1761918699/rainbow3_viuurp.png',
+      'https://res.cloudinary.com/danlxus36/image/upload/v1761918698/rainbow2_rv7diq.png',
+    ],
+  },
   {
     id: '/crafty',
     name: 'Crafty',
