@@ -3,10 +3,10 @@ import {
     FaNodeJs,
     FaHtml5,
     FaCss3Alt,
-    FaCloud,
     FaLock,
     FaGithub,
     FaDatabase,
+    FaCloud,
 } from 'react-icons/fa';
 import {
     SiMongodb,
@@ -71,7 +71,8 @@ export const TechIcon = ({ tech }) => {
         case '.net core':
         case 'dotnet':
             return <SiDotnet size={size} title=".NET Core" />;
-
+        case 'azure':
+            return <FaCloud size={size} title="Azure" />;
         case 'sql server':
             return <FaDatabase size={size} title="SQL Server" />;
         case 'axios':
