@@ -18,7 +18,12 @@ import {
     SiSocketdotio,
     SiPaypal,
     SiWhatsapp,
+    SiVite,
+    SiTypescript,
+    SiDotnet,
+    SiAxios,
 } from 'react-icons/si';
+
 
 export const TechIcon = ({ tech }) => {
     const size = 20;
@@ -40,10 +45,12 @@ export const TechIcon = ({ tech }) => {
         case 'redux':
             return <SiRedux size={size} title="Redux" />;
         case 'jwt':
+        case 'jwt authentication':
             return <SiJsonwebtokens size={size} title="JWT" />;
         case 'cloudinary':
             return <SiCloudinary size={size} title="Cloudinary" />;
         case 'sockets io':
+        case 'socket.io':
             return <SiSocketdotio size={size} title="Socket.IO" />;
         case 'clerk':
             return <FaLock size={size} title="Clerk" />;
@@ -54,10 +61,22 @@ export const TechIcon = ({ tech }) => {
         case 'paypal api':
             return <SiPaypal size={size} title="PayPal API" />;
         case 'monday api':
-            return <FaCloud size={size} title="Monday API" />; // fallback
+            return <FaCloud size={size} title="Monday API" />;
         case 'whatsapp business api':
             return <SiWhatsapp size={size} title="WhatsApp Business API" />;
+        case 'vite':
+            return <SiVite size={size} title="Vite" />;
+        case 'typescript':
+            return <SiTypescript size={size} title="TypeScript" />;
+        case '.net core':
+        case 'dotnet':
+            return <SiDotnet size={size} title=".NET Core" />;
+
+        case 'sql server':
+            return <FaDatabase size={size} title="SQL Server" />;
+        case 'axios':
+            return <SiAxios size={size} title="Axios" />;
         default:
-            return <FaGithub size={size} title={tech} />; // fallback
+            return <FaGithub size={size} title={tech} />;
     }
 };
